@@ -364,6 +364,8 @@ span{
 }
 
 .tweets{
+   
+    height: 100px;
     margin-top: 10px;
     margin-left: 50px;
     margin-right: 50px;
@@ -387,4 +389,40 @@ span{
 .footer p{
     margin-bottom: 10px;
     margin-top: 10px;
+}
+
+
+.timeline-footer {display: none;}
+
+.twitter-timeline{
+    box-shadow: 5px 5px 22px #B8B8B8;
+}
+
+
+.newsStory{
+    box-shadow: 5px 5px 22px #B8B8B8;   
+}
+
+.newsTitle{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.newsImage{
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 50%;
+    
+}
+
+.newsP{
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    text-align:justify;
 }
