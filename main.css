@@ -22,9 +22,12 @@ text-decoration: none;}
     text-decoration: none;
 }
 
+
+
 header {
     color: black;
-    padding: 20px;
+    padding: 10px;
+    background-color: white;
 }
 
 header .row{
@@ -358,6 +361,13 @@ span{
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
+}
+
+.tweets{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left, padding-right: 50px;
 }
 
 .spacer{
