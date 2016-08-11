@@ -426,3 +426,26 @@ span{
     padding-bottom: 50px;
     text-align:justify;
 }
+
+.contact{
+    display: flex;
+    align-items:center;
+    background-image: url("img/contact.jpg");
+    background-size: cover;
+    background-position:center;
+    height: 400px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contact p{
+   font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-weight: 200;
+    font-size: 1.25em;
+    color: white; 
+}
+
+.glyphicon {
+    font-size: 18px;
+}
