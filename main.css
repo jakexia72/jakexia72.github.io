@@ -1,113 +1,99 @@
-body{
+body {
     font-family: 'Helvetica', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
 }
-
-a{color:inherit; 
-color: black;
-text-decoration: none;}
-
-
-
-.links{
+a {
+    color: inherit;
+    color: black;
+    text-decoration: none;
+}
+.links {
     color: black;
 }
-
-.links:visited{
+.links:visited {
     color: black;
 }
-
-.links:hover{
+.links:hover {
     color: grey;
     text-decoration: none;
 }
-
-
-
+.links2 {
+    color: skyblue;
+}
+.links:visited {
+    color: black;
+}
+.links2:hover {
+    color: white;
+    text-decoration: none;
+}
 header {
     color: black;
     padding: 10px;
     background-color: white;
 }
-
-header .row{
-  display: flex;
-  align-items: center;
+header .row {
+    display: flex;
+    align-items: center;
 }
-
 header h1 {
-  font-weight: 700;
-  
+    font-weight: 700;
 }
-
 header nav {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
-
 header a {
     text-decoration: none;
     padding: 10px;
 }
-
 header p {
-  padding: 20px;
-  
+    padding: 20px;
 }
-
-.socialIcons{
+.socialIcons {
     right: 0;
     position: fixed;
     background-color: black;
     height: 110px;
     width: 40px;
-    z-index:99;
+    z-index: 99;
 }
-.socialIcons img{
+.socialIcons img {
     margin-left: 10px;
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 10px;
     padding-bottom: 10px;
-   display: block;
-     
+    display: block;
 }
-
-.jumbotron1{
+.jumbotron1 {
     display: flex;
     text-align: center;
     align-items: center;
     background-image: url("img/jumbotronImg.jpg");
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     color: #ffffff;
     height: 600px;
-    
 }
-
-.title{
+.title {
     font-size: 50px;
     text-decoration: none;
-    color: white;  
+    color: white;
 }
-
-.title2{
+.title2 {
     color: black;
 }
-
-.title3{
+.title3 {
     color: black;
     font-size: 50px;
-    
 }
-
-.jumbotron1 h2{
+.jumbotron1 h2 {
     text-align: center;
     color: #ffffff;
     font-size: 50px;
 }
-
-.jumbotron1 p{
+.jumbotron1 p {
     font-family: 'Roboto', sans-serif;
     padding-left: 50px;
     padding-right: 50px;
@@ -116,8 +102,7 @@ header p {
     font-size: 1.25em;
     color: white;
 }
-
-.btn.btn-primary{
+.btn.btn-primary {
     font-family: 'Roboto', sans-serif;
     margin: 20px;
     border: none;
@@ -125,109 +110,89 @@ header p {
     background-color: white;
     color: black;
 }
-
-.btn.btn-primary:hover{
+.btn.btn-primary:hover {
     font-weight: bold;
     background-color: skyblue;
     color: white;
 }
-
-.btn.btn-secondary{
+.btn.btn-secondary {
     font-family: 'Roboto', sans-serif;
     margin: 5px;
     border: none;
     border-radius: 100px;
     background-color: black;
     color: white;
-    
 }
-
-.btn.btn-secondary:hover{
+.btn.btn-secondary:hover {
     font-weight: bold;
     background-color: skyblue;
     color: white;
 }
-
-
-.events{
+.events {
     display: flex;
     align-items: center;
     background-image: url("img/events.jpeg");
     background-size: cover;
-    background-position:center;
+    background-position: center;
     height: 400px;
     padding-left: 30px;
     padding-right: 30px;
-
 }
-
-.events p{
-   font-family: 'Roboto', sans-serif;
+.events p {
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
     font-weight: 200;
     font-size: 1.25em;
     color: white;
-
 }
-
-.about{
+.about {
     display: flex;
-    align-items:center;
+    align-items: center;
     background-image: url("img/about.jpeg");
     background-size: cover;
-    background-position:center;
+    background-position: center;
     height: 400px;
     padding-left: 30px;
     padding-right: 30px;
 }
-
-.about p{
-   font-family: 'Roboto', sans-serif;
+.about p {
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
     font-weight: 200;
     font-size: 1.25em;
-    color: white; 
+    color: white;
 }
-
-.stats{
+.stats {
     margin-top: 40px;
     color: grey;
 }
-
-.stats div{
-        padding-left: 50px;
-        padding-right: 50px;
+.stats div {
+    padding-left: 50px;
+    padding-right: 50px;
 }
-
-.stats h4{
+.stats h4 {
     font-family: 'Roboto', sans-serif;
 }
-
-.letter{
+.letter {
     margin-top: 40px;
     padding-left: 50px;
     padding-right: 50px;
-    
 }
-
-.letter p{
+.letter p {
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     font-weight: 200;
     font-size: 1.25em;
     display: flex;
     padding: 10px;
-    
 }
-
-.letter img{
+.letter img {
     padding: 10px;
     align-items: center;
     max-height: 100%;
     max-width: 100%;
 }
-
-.profile{
+.profile {
     border-radius: 50%;
     max-height: 90%;
     max-width: 90%;
@@ -235,217 +200,185 @@ header p {
     margin-left: auto;
     margin-right: auto;
 }
-
-.profile.col-sm-4{
+.profile.col-sm-4 {
     padding: 50px;
 }
-
-.profile.col-sm-4 h6{
+.profile.col-sm-4 h6 {
     font-size: 20px;
 }
-
-.profile.col-sm-4 p{
+.profile.col-sm-4 p {
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
 }
-
-.people{
+.people {
     margin: 50px;
-    text-align: center;    
+    text-align: center;
 }
-
-.people h2{
+.people h2 {
     margin: 40px;
 }
-
-
 .eventDisplay {
-  border-radius: 12px;
-  box-shadow: 5px 5px 22px #B8B8B8;
+    border-radius: 12px;
+    box-shadow: 5px 5px 22px #B8B8B8;
     margin-top: 50px;
-  margin-left: 20px;
+    margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
     min-width: 220px;
 }
-
 .thumb1 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/trees.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/trees.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
 .thumb2 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/teaParty.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/teaParty.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
 .thumb3 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/we365.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/we365.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
-
 .thumb4 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/trees.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/trees.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
-
 .thumb5 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/trees.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/trees.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
-
 .thumb6 {
-  -webkit-border-top-right-radius: 12px;
-  -webkit-border-top-left-radius: 12px;
-  background-image: url("img/trees.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 300px;
+    -webkit-border-top-right-radius: 12px;
+    -webkit-border-top-left-radius: 12px;
+    background-image: url("img/trees.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
 }
-
-span{
+span {
     color: black;
     font-size: 30px;
     font-family: Roboto;
 }
-
-
-.eventDisplay h2{
-
+.eventDisplay h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.15em;
-    font-weight:normal;
+    font-weight: normal;
 }
-
-.eventDisplay p{
-
+.eventDisplay p {
     text-align: justify;
 }
-
-.centerButton{
+.centerButton {
     text-align: center;
 }
-
-.addMargin{
+.addMargin {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
 }
-
-.tweets{
-   
+.tweets {
     height: 100px;
     margin-top: 10px;
     margin-left: 50px;
     margin-right: 50px;
-    padding-left, padding-right: 50px;
+    padding-left,
+    padding-right: 50px;
 }
-
-.spacer{
+.spacer {
     height: 10px;
 }
-
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-  /* Set the fixed height of the footer here */
+    /* Set the fixed height of the footer here */
     height: 40px;
     background-color: #f5f5f5;
     display: block;
 }
-
-.footer p{
+.footer p {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
-
-.timeline-footer {display: none;}
-
-.twitter-timeline{
+.timeline-footer {
+    display: none;
+}
+.twitter-timeline {
     box-shadow: 5px 5px 22px #B8B8B8;
 }
-
-
-.newsStory{
-    box-shadow: 5px 5px 22px #B8B8B8;   
+.newsStory {
+    box-shadow: 5px 5px 22px #B8B8B8;
 }
-
-.newsTitle{
+.newsTitle {
     padding: 20px;
     text-align: center;
     margin-bottom: 5px;
 }
-
-.newsImage{
+.newsImage {
     height: 250px;
     width: 250px;
     padding: 20px;
     display: block;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    
 }
-
-.newsP{
+.newsP {
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 50px;
-    text-align:justify;
+    text-align: justify;
 }
-
-.contact{
+.contact {
     display: flex;
-    align-items:center;
+    align-items: center;
     background-image: url("img/contact.jpg");
     background-size: cover;
-    background-position:center;
+    background-position: center;
     height: 400px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 25px;
 }
-
-.contact p{
-   font-family: 'Roboto', sans-serif;
+.contact p {
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
     font-weight: 200;
     font-size: 1.25em;
-    color: white; 
+    color: white;
 }
-
 .glyphicon {
     font-size: 18px;
 }
