@@ -3,7 +3,6 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 a {
-    color: inherit;
     color: black;
     text-decoration: none;
 }
@@ -20,8 +19,8 @@ a {
 .links2 {
     color: skyblue;
 }
-.links:visited {
-    color: black;
+.links2:visited {
+    color: skyblue;
 }
 .links2:hover {
     color: white;
@@ -109,6 +108,7 @@ header p {
     border-radius: 100px;
     background-color: white;
     color: black;
+    transition: all linear 0.15s;
 }
 .btn.btn-primary:hover {
     font-weight: bold;
@@ -122,6 +122,7 @@ header p {
     border-radius: 100px;
     background-color: black;
     color: white;
+    transition: all linear 0.15s;
 }
 .btn.btn-secondary:hover {
     font-weight: bold;
@@ -370,7 +371,7 @@ span {
     height: 400px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
 }
 .contact p {
     font-family: 'Roboto', sans-serif;

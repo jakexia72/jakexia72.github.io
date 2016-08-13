@@ -17,11 +17,75 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
     <script src="main.js"></script>
+    <script src="accordian.js"></script>
 
 </head>
 
 <style>
+    /*----- Accordion -----*/
+    
+    .accordion,
+    .accordion * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .accordion {
+        overflow: hidden;
+        background: #f7f7f7;
+    }
+    /*----- Section Titles -----*/
+    
+    .accordion-section-title {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 1px solid #1a1a1a;
+        background: white;
+        transition: all linear 0.15s;
+        /* Type */
+        font-size: 1.200em;
+        font-weight: 500;
+        color: #262626;
+    }
+    
+    .accordion-section-title.active {
+        background-color: white;
+        /* Type */
+        text-decoration: none;
+        color: grey;
+        text-shadow: none;
+    }
+    
+    .accordion-section-title:hover {
+        background-color: white;
+        /* Type */
+        text-decoration: none;
+        color: grey;
+        text-shadow: none;
+    }
+    
+    .accordion-section-title:visited {
+        font-size: 1.200em;
+        font-weight: 500;
+        color: #262626;
+    }
+    
+    .accordion-section:last-child .accordion-section-title {
+        border-bottom: none;
+    }
+    /*----- Section Content -----*/
+    
+    .accordion-section-content {
+        padding: 15px;
+        display: none;
+    }
+    
     *:focus {
         outline: none;
     }
@@ -97,6 +161,73 @@
         <div class="row">
             <div class="col-sm-8">
 
+                <h2>FAQ</h2>
+                <p>Look here for some frequently asked questions to save yourself some time.</p>
+
+                <div class="accordion">
+                    <div class="accordion-section">
+                        <!--one-->
+                        <a class="accordion-section-title" href="#accordion-1">▸ How do I sign up to volunteer?</a>
+
+                        <div id="accordion-1" class="accordion-section-content">
+                            <p>1. Choose the <a href="events.html">event</a> you want to participate in and click on the button.
+                                <br>2. Write an email that includes your full name and the name of the event in the subject line. To sign up for more than one event, simply add another event name in the subject line.
+                                <br>3. Wait for the confirmation email and your in!</p>
+                        </div>
+                        <!--two-->
+                        <a class="accordion-section-title" href="#accordion-2">▸ What if I can't make the event I signed up for?</a>
+
+                        <div id="accordion-2" class="accordion-section-content">
+                            <p>Do not simply not show up. We understand that sometimes your schedule is out of your control, but when you confirm, we give you a specially reserved, limited, spot. But if you really can't make it, please email us at least 3 days before the event so that we can find another volunteer to take your place.</p>
+                        </div>
+                        <!--three-->
+                        <a class="accordion-section-title" href="#accordion-3">▸ How do I get my volunteer hours?</a>
+
+                        <div id="accordion-3" class="accordion-section-content">
+                            <p>As a student in Ontario, you are required a minimum of 40 hours of community service. Thankfully, all of our events can add to you community service hours. When you volunteer for one of our events, we will give you the hours by the end. Just don't forget your volunteer form!</p>
+                        </div>
+                        <!--five-->
+                        <a class="accordion-section-title" href="#accordion-5">▸ How do I get to my event?</a>
+
+                        <div id="accordion-5" class="accordion-section-content">
+                            <p>Unless otherwise specified, you are responsible getting to the site yourself. </p>
+                        </div>
+                        <!--six-->
+                        <a class="accordion-section-title" href="#accordion-6">▸ When should I arrive at my event?</a>
+
+                        <div id="accordion-6" class="accordion-section-content">
+                            <p>Unless otherwise specified, please always be onsite atleast 15 minutes before the event starts, this way we can check in with you and prepare you.</p>
+                        </div>
+                        <!--seven-->
+                        <a class="accordion-section-title" href="#accordion-7">▸ What is the photo policy?</a>
+
+                        <div id="accordion-7" class="accordion-section-content">
+                            <p>You can take all the photos you want and please spread the word(unless you are asked not to). Keep in mind that, we too will be photographing our events and by volunteering at our events you agree that we can take photos of you.</p>
+                        </div>
+                        <!--eight-->
+                        <a class="accordion-section-title" href="#accordion-8">▸ What if I want to plan an event or require volunteers at my event?</a>
+
+                        <div id="accordion-8" class="accordion-section-content">
+                            <p>placeholder</p>
+                        </div>
+                        <!--four-->
+                        <a class="accordion-section-title" href="#accordion-4">▸ Can I be on the executive team?</a>
+
+                        <div id="accordion-4" class="accordion-section-content">
+                            <p>We are always looking for talented and committed individuals to join our ranks. If you think you have what it takes, email us for more information.</p>
+                        </div>
+
+
+
+                        <!--end .accordion-section-content-->
+                    </div>
+                    <!--end .accordion-section-->
+                </div>
+                <!--end .accordion-->
+
+                <div>
+                    &nbsp;
+                </div>
                 <h2>Send us an email</h2>
                 <p>Don't forget to include your full name and how we can get back to you.</p>
 
@@ -104,13 +235,7 @@
                 <textarea id="myText" placeholder="message"></textarea>
                 <btn class="btn btn-secondary" onclick="sendMail(); return false" style="width:120px"><span class="glyphicon glyphicon-send" aria-hidden="true" style="color:white"></span> Send</btn>
 
-                <h2>FAQ</h2>
-                <p>Look here for some frequently asked questions to save yourself some time.</p>
-
-                <div class="question">
-                    <h4 id=toggle>How do I sign up for an event?</h4>
-                    <p id="showme">lorem ipsum</p>
-                </div>
+                <!--End of first column-->
             </div>
 
             <div class="col-sm-4">
