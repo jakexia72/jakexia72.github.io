@@ -1,23 +1,13 @@
-@media screen and (max-width: 425) {
-    .col-sm-8 {
-        width: 100%;
-    }
-    .col-sm-4 {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 320) {
-    .col-sm-8 {
-        width: 100%;
-    }
-    .col-sm-4 {
-        width: 100%;
-    }
+@media screen and (max-width: 768px) {
     header .row {
         display: flex;
         -webkit-flex: 1 1 15em;
         flex-flow: row wrap;
-        align-items: center;
+    }
+    footer .row {
+        display: flex;
+        -webkit-flex: 1 1 15em;
+        flex-flow: row wrap;
     }
 }
 body {
