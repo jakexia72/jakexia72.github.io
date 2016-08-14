@@ -26,6 +26,16 @@ a {
     color: white;
     text-decoration: none;
 }
+.links3 {
+    color: grey;
+}
+.links3:visited {
+    color: grey;
+}
+.links3:hover {
+    color: black;
+    text-decoration: none;
+}
 header {
     color: black;
     padding: 10px;
@@ -334,4 +344,24 @@ span {
 }
 .glyphicon {
     font-size: 18px;
+}
+footer {
+    color: grey;
+    padding: 10px;
+    background-color: white;
+}
+footer .row {
+    display: flex;
+    align-items: center;
+}
+footer h1 {
+    font-weight: 700;
+}
+footer nav {
+    display: flex;
+    justify-content: flex-end;
+}
+footer a {
+    text-decoration: none;
+    padding: 10px;
 }
