@@ -148,6 +148,7 @@ header p {
     color: white;
 }
 .about {
+    color: white;
     display: flex;
     align-items: center;
     background-image: url("img/about.jpeg");
@@ -364,6 +365,7 @@ span {
     text-align: justify;
 }
 .contact {
+    color: white;
     display: flex;
     align-items: center;
     background-image: url("img/contact.jpg");
