@@ -22,10 +22,12 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 a {
+    transition: all linear 0.15s;
     color: black;
     text-decoration: none;
 }
 .links {
+    transition: all linear 0.15s;
     color: black;
 }
 .links:visited {
@@ -36,6 +38,7 @@ a {
     text-decoration: none;
 }
 .links2 {
+    transition: all linear 0.15s;
     color: skyblue;
 }
 .links2:visited {
@@ -46,6 +49,7 @@ a {
     text-decoration: none;
 }
 .links3 {
+    transition: all linear 0.15s;
     color: grey;
 }
 .links3:visited {
