@@ -1,3 +1,22 @@
+@media screen and (max-width: 425) {
+    .col-sm-8 {
+        width: 100%;
+    }
+    .col-sm-4 {
+        width: 100%;
+    }
+    .copyRight {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 375) {
+    .col-sm-8 {
+        width: 100%;
+    }
+    .col-sm-4 {
+        width: 100%;
+    }
+}
 body {
     font-family: 'Helvetica', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -47,6 +66,7 @@ header {
 }
 header .row {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
 }
 header h1 {
@@ -59,9 +79,6 @@ header nav {
 header a {
     text-decoration: none;
     padding: 10px;
-}
-header p {
-    padding: 20px;
 }
 .socialIcons {
     right: 0;
