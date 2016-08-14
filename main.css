@@ -229,60 +229,9 @@ header p {
     margin-bottom: 20px;
     min-width: 220px;
 }
-.thumb1 {
+.thumb {
     -webkit-border-top-right-radius: 12px;
     -webkit-border-top-left-radius: 12px;
-    background-image: url("img/trees.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-.thumb2 {
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-top-left-radius: 12px;
-    background-image: url("img/teaParty.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-.thumb3 {
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-top-left-radius: 12px;
-    background-image: url("img/we365.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-.thumb4 {
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-top-left-radius: 12px;
-    background-image: url("img/trees.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-.thumb5 {
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-top-left-radius: 12px;
-    background-image: url("img/trees.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-.thumb6 {
-    -webkit-border-top-right-radius: 12px;
-    -webkit-border-top-left-radius: 12px;
-    background-image: url("img/trees.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
