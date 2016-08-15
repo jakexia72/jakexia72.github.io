@@ -170,6 +170,9 @@ header a {
     font-size: 1.25em;
     color: white;
 }
+.eventDisplay {
+    visibility: hidden;
+}
 .about {
     color: white;
     display: flex;
