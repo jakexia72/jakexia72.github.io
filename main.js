@@ -1,5 +1,5 @@
 function sendMail() {
-    var link = "mailto:markhamyouthchallenge@gmail.com" + "?cc=myCCaddress@example.com" + "&subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
+    var link = "mailto:markhamyouthchallenge@gmail.com" + "?subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
 
     window.location.href = link;
 
