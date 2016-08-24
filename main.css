@@ -171,7 +171,7 @@ header a {
     color: white;
 }
 .eventDisplay {
-    /*visibility:*/
+    visibility: hidden;
 }
 .about {
     color: white;
