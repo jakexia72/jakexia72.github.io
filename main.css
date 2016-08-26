@@ -247,6 +247,7 @@ header a {
     margin: 40px;
 }
 .eventDisplay {
+    visibility: hidden;
     border-radius: 12px;
     box-shadow: 5px 5px 22px #B8B8B8;
     margin-top: 50px;
