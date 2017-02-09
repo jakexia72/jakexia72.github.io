@@ -333,6 +333,16 @@ span {
     margin-right: auto;
     border-radius: 50%;
 }
+.newsStory p{
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: justify;
+}
+.newsStory ul{
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: justify;
+}
 .newsP {
     padding-right: 50px;
     padding-left: 50px;
