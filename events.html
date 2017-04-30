@@ -2,236 +2,189 @@
 <html>
 
 <head>
-    <title>CTWMarkham</title>
+    <title>CTW Markham</title>
 
     <meta charset="utf-8" />
 
-    <link rel="shortcut icon" href="icon.ico" />
+    <link rel="shortcut icon" href="icon.ico" type='image/x-icon' />
 
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-82538207-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-
+    <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
 
-    <header class="container">
+    <div class="space"></div>
+    <section class="withDoubleMargins">
+        <h1 class="dark big">Events</h1>
+        <p> Here is a range of events that we hold, or support. To sign up click on the button below the event you wish to participate in and shoot us an email with your full name, age, and why you want to participate.</p>
+    </section>
+
+    <section class="withMainMargins" id="events">
         <div class="row">
-            <h1 class="col-sm-4">CTW Markham</h1>
+            <div class="col-sm-6">
+                <div class="squareDiv" style="background-image: url('Img/retire.jpg'); background-size:cover">
+                </div>
+                <div class="sideDiv">
 
+                    <h2 class="blue">Brain Games</h2>
+                    <h4 class="blue">@The Marleigh Retirement Home!</h4>
+                        <h4 class="blue addSpacer">Every Saturday from April 29th to May 20th</h4>
+                    <a class="button" onclick="moreInfo('Brain Games', 'Brain Games raises awareness for Alzheimers & Related Dementias. Play some board games with amazing seniors to help maintain their cognitive skills!', 'mailto:markhamyouthchallenge@gmail.com?Subject=Brain Games &body=Full Name:')">details</a>
+                </div>
+            </div>
 
-            <nav class="col-sm-8 text-right">
-                <a class="links" href="index.html">Home</a>
-                <a class="links" href="events.html"><b>Events</b></a>
-                <a class="links" href="news.html">News</a>
-                <a class="links" href="about.html">About</a>
-                <a class="links" href="contact.html">Contact</a>
-            </nav>
+            <div class="col-sm-6">
+                <div class="squareDiv" style="background-image: url('Img/1.jpg'); background-size:cover">
+                </div>
+                <div class="sideDiv">
+
+                    <h2 class="blue">Brain Games</h2>
+                    <h4 class="blue">@2311 McNicoll Ave, Toronto ON</h4>
+                    <h4 class="blue addSpacer">Sunday April 23rd 2017</h4>
+                    <a class="button" onclick="moreInfo('Brain Games', 'Join Markham Youth, ESL Troop at the Yee Hong Centre and play board games and puzzles with residents raising awareness of Alzheimer’s and Related Dementias. Brain Games raises awareness for Alzheimers & Related Dementias. Play some board games with amazing seniors to help maintain their cognitive skills!', 'mailto:markhamyouthchallenge@gmail.com?Subject=Brain Games &body=Full Name:')">details</a>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="squareDiv" style="background-image: url('Img/1.jpg'); background-size:cover">
+                </div>
+                <div class="sideDiv">
+
+                    <h2 class="blue">Tree Planting</h2>
+                    <h4 class="blue">@Rouge Valley</h4>
+                    <h4 class="blue addSpacer">Sunday August 13th 2017</h4>
+                    <a class="button" onclick="moreInfo(0)">get planting</a>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="squareDiv" style="background-image: url('Img/1.jpg'); background-size:cover">
+                </div>
+                <div class="sideDiv">
+
+                    <h2 class="blue">Tree Planting</h2>
+                    <h4 class="blue">@Rouge Valley</h4>
+                    <h4 class="blue addSpacer">Sunday August 13th 2017</h4>
+                    <a class="button" onclick="moreInfo(0)">get planting</a>
+                </div>
+            </div>
 
         </div>
+    </section>
 
-    </header>
+    <div class="space"></div>
+    <section class="withDoubleMargins">
+        <hr>
+        <h1 class="dark">Coming Soon</h1>
+        <p>These are all the events that we plan on having, but are not quite ready at the moment. Please check back here soon to sign up for them.</p>
+    </section>
 
-    <div class="socialIcons">
-        <div>
-            <a href="https://www.facebook.com/CTWMarkham/?fref=ts" target="_blank">
-                <img src="img/facebook.svg" width="20">
-            </a>
-            <a href="https://www.instagram.com/ctwmarkham/" target="_blank">
-                <img src="img/instagram.svg" width="20">
-            </a>
-            <a href="https://twitter.com/ctw_markham" target="_blank">
-                <img src="img/twitter.svg" width="20">
-            </a>
+
+    <section class="withMainMargins" id="events">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="squareDiv" style="background-image: url('Img/1.jpg'); background-size:cover">
+                </div>
+                <div class="sideDiv">
+
+                    <h2 class="darkGrey">Tree Planting</h2>
+                    <h4 class="darkGrey">@Rouge Valley</h4>
+                    <h4 class="darkGrey addSpacer">Sunday August 13th 2017</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+-->
+
+
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <footer>
+        <hr>
+        <div class="footer">
+            <h2 class="grey">Change the World<br> Markham</h2>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Volunteer</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <p class="grey">&copy; copyright 2017 | website designed by Jake X.</p>
+    </footer>
+</body>
+
+<!-- The Modal
+<div id="myModal" class="modal">
+
+    
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class=exit onclick="closeModal()">&#10005;</span>
+            <h2 id="mTitle">Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p id="mText">Some text in the Modal Body</p>
+
         </div>
     </div>
 
-
-    <section class="events">
-        <div class="container">
-            <h2 class=t itle>Opportunities</h2>
-            <p>Here you will find a list of all the events that you can volunteer for. Pick and choose events you want to participate in. Sign up quickly! Spots for each event is limited. To sign up, click the button under the event and send us an email. Please include your full name and we will get back to you. If you have any questions about sign up or volunteering, please be sure to visit our <a class=links2 href="contact.html">FAQ</a>.</p>
-        </div>
-    </section>
-
-
-    <section class="container">
-        <div class="row">
-
-            <div class="col-sm-4">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/trees.jpg)">
-                    </div>
-                    <div class="addMargin">
-                        <span>10,000 Trees</span>
-                        <h2><b>Time to be determined<br/><br/> @Rouge Valley Park</b></h2>
-                        <hr>
-                        <p>Join the ranks of 2000+ other volunteers to aid the restoration of the Rouge Valley Watershed. Get hands-on, planting trees and flowers, all while enjoying the outdoors. Barbeque lunch is provided! </p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:tempEmail?Subject=Event Title &body=Name:">get planting</a>
-                        </div>
-                    </div>
-                    <div class="spacer">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-8">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/run.jpg)">
-                    </div>
-                    <div class="addMargin">
-                        <span>Angus Glen Ten Miler</span>
-                        <h2><b>Various dates in Feburary<br/><br/> @Angus Glen Golf Course</b></h2>
-                        <hr>
-                        <p><b>Friday, April 7 </b> : Race Kit Stuffing – 3 hours (10 people needed)
-                        <br/><br/> 
-                        <b>Saturday, April 8 </b> : Race Kit Pickup – 4 hours (2 adults 2 teens needed from 12noon – 4pm)
-                        <br/><br/> 
-                        <b>Sunday, April 9 </b> : Race Day – 4/5 hours (40 people needed - 8am – 12noon/1pm depending on shift)
-                        <br/><br/>
-                        Please include your age and availablity in the email. Thanks for you interest!
-
-                        </p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:sara@raceworks.ca?Subject=Angus Glen 10 Mile Volunteering &body=">get involved</a>
-                        </div>
-                    </div>
-                    <div class="spacer">
-                    </div>
-                </div>
-            </div>
-            <!--
-            <div class="col-sm-4">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/we365.png)">
-                    </div>
-                    <div class="addMargin">
-                        <span>WE365</span>
-                        <h2><b>September 20 | 9:00am - 4:00pm <br/><br/> @Rouge Valley Park</b></h2>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim nisi mauris, quis semper ex vehicula ut. Etiam cursus convallis ullamcorper. Donec a sagittis ipsum. Sed ut arcu non augue aliquam finibus nec quis massa.</p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:tempEmail?Subject=Event Title &body=Name:">get the app</a>
-                        </div>
-                    </div>
-                    <div class="spacer">
-                    </div>
-                </div>
-            </div>
-            
-            -->
-        </div>
-
-        <!-- 
-   <div class="row">
-
-            <div class="col-sm-4">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/trees.jpg)">
-                    </div>
-                    <div class="addMargin">
-                        <span>Event Name</span>
-                        <h2><b>September 20 | 9:00am - 4:00pm <br/><br/> @Rouge Valley Park</b></h2>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim nisi mauris, quis semper ex vehicula ut. Etiam cursus convallis ullamcorper. Donec a sagittis ipsum. Sed ut arcu non augue aliquam finibus nec quis massa.</p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:tempEmail?Subject=Event Title &body=Name:">get planting</a>
-                        </div>
-                    </div>
-                    <div class="spacer">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/trees.jpg)">
-                    </div>
-                    <div class="addMargin">
-                        <span>Event Name</span>
-                        <h2><b>September 20 | 9:00am - 4:00pm <br/><br/> @Rouge Valley Park</b></h2>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim nisi mauris, quis semper ex vehicula ut. Etiam cursus convallis ullamcorper. Donec a sagittis ipsum. Sed ut arcu non augue aliquam finibus nec quis massa.</p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:tempEmail?Subject=Event Title &body=Name:">get planting</a>
-                        </div>
-                    </div>
-                    <div class="spacer">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="eventDisplay">
-                    <div class="thumb" style="background-image: url(img/trees.jpg)">
-                    </div>
-                    <div class="addMargin">
-                        <span>Event Name</span>
-                        <h2><b>September 20 | 9:00am - 4:00pm <br/><br/> @Rouge Valley Park</b></h2>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim nisi mauris, quis semper ex vehicula ut. Etiam cursus convallis ullamcorper. Donec a sagittis ipsum. Sed ut arcu non augue aliquam finibus nec quis massa.</p>
-                        <div class="centerButton">
-                            <a class="btn btn-secondary" href="mailto:tempEmail?Subject=Event Title &body=Name:">get planting</a>
-                        </div>
-                    </div> 
-                    <div class="spacer">
-                    </div>
-                </div> 
-            </div> 
-
-        </div>-->
-    </section>
-
-    <footer class="container">
-        <hr>
-        <div class="row">
-            <h4 class="col-sm-4">CTW Markham</h4>
-
-
-            <nav class="col-sm-8 text-right">
-                <a class="links3" href="index.html">Home</a>
-                <a class="links3" href="events.html">Events</a>
-                <a class="links3" href="news.html">News</a>
-                <a class="links3" href="about.html">About</a>
-                <a class="links3" href="contact.html">Contact</a>
-            </nav>
-
-        </div>
-
-        <p class="copyRight" style="text-align:center">&copy; 2016 CTWMarkham | Website created by Jake Xia
-            <p>
-    </footer>
-
-
-</body>
+</div> -->
 
 
 
+<ul class="staticTopnav" id="mytopnav">
+    <li>
+        <div class="logo"></div>
+    </li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="https://ctwmarkham.tumblr.com/" target="_blank">Story</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="volunteer.html">Volunteer</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
 
 
-</html>
+<div id="mySidebar" class="sidebar diagGradient">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
+    <div class="container">
+        <h2 id="mTitle">Header</h2>
+        <p id="mText" class="white addSpacer">body some text</p>
+        <a id="sendRequest" class="button2" href="mailto:tempEmail?Subject=Event Title &body=Name:">volunteer</a>
+    </div>
+</div>
+
+
+
+<div id="mySidenav" class="sidenav diagGradient">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="https://ctwmarkham.tumblr.com/" target="_blank">Story</a>
+    <a href="about.html">About</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+
+<span class="staticHamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
