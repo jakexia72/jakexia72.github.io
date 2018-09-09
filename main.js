@@ -3,8 +3,34 @@ var main = function () {
     //$("#myMenu").css("height", window.innerHeight);
 
     //$("#myMenu").css("width", window.innerWidth);
+    
+    
+    //setting the jumbotron text logo
+    if (window.innerWidth < 768){
+        $('#jumbotronFull').css("background-image", "url(Img/jumboVertical.jpg)");
+        $('#textLogo').css("width", window.innerWidth * 0.75);
+        $('#textLogo').attr("src", "Img/textLogoVertical.png");
+        
+    } else {
+            $('#textLogo').css("width", window.innerWidth * 0.6);
+            $('#jumbotronFull').css("background-attachment", "fixed");
+    }
+    
+
 
     //making events square
+    if (window.innerWidth <768){
+        
+        var bw = window.innerWidth;
+        
+         $('.squareDiv').css({'height': bw + 'px'});
+        
+    $('.square').css({ 'height': bw + 'px'});
+    $('.longHorizontal').height($('.squareDiv').height());  
+    $('.fullsizeImg').css({ 'width': bw + 'px'});
+        
+    } else {
+    
     var cw = $('.squareDiv').width();
     $('.squareDiv').css({
         'height': cw + 'px'
@@ -14,7 +40,20 @@ var main = function () {
     $('.square').css({
         'height': cw + 'px'
     });
+         //setting longHorizontal height
+    $('.longHorizontal').height($('.squareDiv').height());
+    }
 
+$('#fullsizeDiv1').height($('#row1').height());
+    $('#fullsizeDiv2').height($('#row2').height());
+     $('#fullsizeDiv3').height($('#row3').height());
+$('#fullsizeDiv4').height($('#row4').height());
+    
+  
+    
+    
+   
+    
 
 
     //making rectDiv rectangular
@@ -26,14 +65,16 @@ var main = function () {
     //making rectDiv same height as window
     $('.rectDiv').css("height", window.innerHeight);
 
+     $('.full').css("height", window.innerHeight);
+    
     //setting jumbotron height
     $("#jumbotronFull").css("height", window.innerHeight);
 
-    //setting longHorizontal height
-    $('.longHorizontal').height($('.squareDiv').height());
+
+   
 
     //setting when background should change
-    var changePoint = ($('#jumbotronFull').offset().top + $('#jumbotronFull').height() * 0.9);
+    var changePoint = ($('#jumbotronFull').offset().top + $('#jumbotronFull').height() * 0.9)*2;
 
     $(window).on('scroll', function () {
         //top of the screen
@@ -42,14 +83,15 @@ var main = function () {
         //if past changePoint, change the style
         if (top > changePoint) {
             $(".topnav").addClass('changeStyle');
-            $(".whiteLogo").addClass('logo');
-            $('.hamburger').addClass('hChangeStyle');
+  $(".whiteLogo").attr("src","Img/redlogo.svg");
+        $('.hamburger').addClass('hChangeStyle');
+            
             // document.getElementById('logo').src = 'img/logo-big2.svg'
 
 
         } else if (top < changePoint) {
             $('.topnav').removeClass('changeStyle');
-            $(".whiteLogo").removeClass('logo');
+            $(".whiteLogo").attr("src","Img/whitelogo.svg");
             $('.hamburger').removeClass('hChangeStyle');
             //document.getElementById('logo').src = 'img/logo-big.svg'
         }
@@ -127,7 +169,7 @@ function closeModal() {
 
 //email script
 function sendMail() {
-    var link = "mailto:markhamyouthchallenge@gmail.com" + "?subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
+    var link = "mailto:pethstrubotics@gmail.com" + "?subject=" + escape(document.getElementById('mySubject').value) + "&body=" + escape(document.getElementById('myText').value);
 
     window.location.href = link;
 

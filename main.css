@@ -1,6 +1,9 @@
 html,
 body {
     overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+    padding:0;
+    margin:0;
     
 }
 h1 {
@@ -8,36 +11,46 @@ h1 {
     font-weight: 900 !important;
 }
 h2 {
-    font-family: "Helvetica", sans-serif;
-    font-weight: 900 !important;
+    font-family: "Montserrat", sans-serif; !important;
+    font-weight: 700 !important;
     font-size: 40px !important;
 }
 h3 {
-    font-family: "Poppins", sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     font-weight: 700 !important;
     font-size: 30px !important;
 }
 h4 {
-    font-family: "Poppins", sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     font-weight: 400 !important;
     font-size: 20px !important;
     line-height: 150% !important;
 }
 p {
     padding-top: 20px;
-    font-family: "Poppins", sans-serif;
-    color: #768B95;
-    line-height: 150% !important;
+    font-size: 18px;
+    font-family: "Arvo", sans-serif;
+    color: #2A2A2A;
+    letter-spacing: .012em;
+    line-height: 180% !important;
 }
+
 
 a:hover{
     cursor: pointer;
+    text-decoration: none;
+}
+.link{
+    color: #580437;
+    transition: all 0.25s ease;
+}
+.link:hover{
+    transition: all 0.25s ease;
+    color: #FFD600 !important;
 }
 .whiteLogo {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: white;
+    height: 70px;
+    width: 70px;
 }
 .logo {
     height: 50px;
@@ -45,13 +58,13 @@ a:hover{
     border-radius: 50%;
     background: #8AC942;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(right top, #19CEC2, #8AC942, #FACC00);
+    background: -webkit-linear-gradient(right top, #FFD600, #8AC942, #FACC00);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom left, #19CEC2, #8AC942, #FACC00);
+    background: -o-linear-gradient(bottom left, #FFD600, #8AC942, #FACC00);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom left, #19CEC2, #8AC942, #FACC00);
+    background: -moz-linear-gradient(bottom left, #FFD600, #8AC942, #FACC00);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom left, #19CEC2, #8AC942, #FACC00);
+    background: linear-gradient(to bottom left, #FFD600, #8AC942, #FACC00);
     /* Standard syntax (must be last) */
 }
 .big {
@@ -61,7 +74,7 @@ a:hover{
     margin: 75px;
 }
 .sideDiv {
-    margin: 75px;
+    margin: 25px;
 }
 .svgMargin {
     margin: 75px;
@@ -70,13 +83,13 @@ a:hover{
     margin: 75px;
 }
 .dark {
-    color: #294053;
+    color: black;
 }
 .white {
     color: white !important;
 }
-.blue {
-    color: #16C584;
+.yellow {
+    color: #FFD600;
 }
 .grey {
     color: #C7D0D4;
@@ -99,8 +112,22 @@ a:hover{
     bottom: 10px;
     left: 35px;
 }
+
+.center{
+    text-align: center;
+}
+
+.sponsorList{
+    font-size: 20px;
+}
+
+.full{
+    align-content: center;
+    vertical-align: center;
+}
+
 #jumbotronFull {
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,10 +135,14 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     background-image: url(Img/jumbo.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: right;
+    /*background-size: cover;
+    background-position: center;*/
+    text-align: center;
     margin: 0;
+}
+#textLogo{
+    width: inherit;
+    align-self: center;
 }
 .smallBanner {
     height: 30px;
@@ -123,6 +154,14 @@ a:hover{
     height: 20px;
     margin-left: 10px;
     margin-right: 10px;
+}
+.fullsizeImg{
+    max-width:100%;
+    max-height:100%;
+}
+.fullsizeDiv{
+    background-size: cover;
+    
 }
 .bannerIcon {
     margin-left: auto;
@@ -139,12 +178,13 @@ a:hover{
     margin-right: 250px;
 }
 .topnav {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+    letter-spacing: 6px;
     background-color: transparent;
     transition: all 0.25s ease;
     position: fixed;
-    top: 0;
+    top: 100px;
     left: 30px;
     width: 100%;
     padding: 20px;
@@ -155,7 +195,7 @@ a:hover{
 ul.topnav {
     margin: 0;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.25em;
     /*overflow: hidden;*/
     /*align-items: center;*/
 }
@@ -168,14 +208,15 @@ ul.topnav li {
     color: white;
 }
 .topnav a:hover {
-    color: #294053;
+    color: #FFD600;
     text-decoration: none;
     font-weight: 900;
+    font-size: 1.25em;
 }
 ul.staticTopnav {
     margin: 0;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.25em;
     /*overflow: hidden;*/
     /*align-items: center;*/
 }
@@ -205,10 +246,10 @@ ul.staticTopnav li {
     color: #C7D0D4 !important;
 }
 .changeStyle a {
-    color: #274053 !important;
+    color: black !important;
 }
 .changeStyle a:hover {
-    color: #C7D0D4 !important;
+    color: #FFD600 !important;
 }
 .space {
     height: 50px;
@@ -220,35 +261,29 @@ button {
     border: none;
 }
 .button {
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
     border-radius: 6px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-decoration: none;
     color: white;
-    background: #16C584;
-    background: -webkit-linear-gradient(left, #19CEC4, #16C584);
+    background: #2A2A2A;
+    /* background: -webkit-linear-gradient(left, #1D2059, #FB0033);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #19CEC4, #16C584);
+    /* background: -o-linear-gradient(right, #1D2059, #FB0033);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #19CEC4, #16C584);
+   /* background: -moz-linear-gradient(right, #1D2059, #FB0033);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #19CEC4, #16C584);
-    /* Standard syntax */
+    /* background: linear-gradient(to right, #1D2059, #FB0033);
+    /* Standard syntax */ 
 }
 .button:hover {
     text-decoration: none;
-    color: white;
-    background: #FACD00;
-    background: -webkit-linear-gradient(left, #FACD00, #16C584);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, #FACD00, #16C584);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, #FACD00, #16C584);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #FACD00, #16C584);
+    color: #2A2A2A;
+    background: #FFD600;
     /* Standard syntax */
 }
 .rectangle {
@@ -276,27 +311,30 @@ button {
 .longHorizontal {
     display: block;
 }
+.textAlignRight{
+    text-align: right;
+}
 .gradient {
-    background: #16C584;
-    background: -webkit-linear-gradient(left, #19CEC4, #16C584);
+    background: #FB0033;
+    background: -webkit-linear-gradient(left, #1D2059, #FB0033);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #19CEC4, #16C584);
+    background: -o-linear-gradient(right, #1D2059, #FB0033);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #19CEC4, #16C584);
+    background: -moz-linear-gradient(right, #1D2059, #FB0033);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #19CEC4, #16C584);
+    background: linear-gradient(to right, #1D2059, #FB0033);
     /* Standard syntax */
 }
 .diagGradient {
-    background: #19CEC4;
+    background: #1D2059;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, #19CEC4, #16C584);
+    background: -webkit-linear-gradient(left top, #1D2059, #FB0033);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #19CEC4, #16C584);
+    background: -o-linear-gradient(bottom right, #1D2059, #FB0033);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, #19CEC4, #16C584);
+    background: -moz-linear-gradient(bottom right, #1D2059, #FB0033);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #19CEC4, #16C584);
+    background: linear-gradient(to bottom right, #1D2059, #FB0033);
     /* Standard syntax */
 }
 .jobIcon {
@@ -304,47 +342,37 @@ button {
     width: 100px;
 }
 footer {
-    margin: 25px;
+    
+    background: -webkit-linear-gradient(#1D2059, #FB0033, #1D2059);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1D2059, #FB0033, #1D2059);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1D2059, #FB0033, #1D2059);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1D2059, #FB0033, #1D2059);
+    margin: 0px;
+    text-align: center;
 }
-.footer {}
-.footer h2 {
-    font-size: 25px !important;
+.footer {
 }
-.footer ul {
-    margin: 0;
-    font-weight: 600;
-    font-size: 1em;
-    font-family: 'Helvetica', sans-serif;
-    background-color: transparent;
-    transition: all 0.25s ease;
-    width: 100%;
-    padding: 0px;
-    list-style-type: none;
-    width: 150px;
-    display: none;
+.circle{
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%
 }
-.footer li {
-    margin-top: 1.25em;
-}
-.footer a {
-    text-decoration: none;
-    color: #C7D0D4 !important;
-}
-.footer a:hover {
-    text-decoration: none;
-    color: #16C584 !important;
-}
+
 
 /*mobile menu*/
 
 .hamburger {
     visibility: hidden;
+    display: none;
 }
 .staticHamburger {
     visibility: hidden;
 }
 .sidenav {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     transition: all 0.25s ease;
     height: 100%;
@@ -358,7 +386,7 @@ footer {
     text-decoration: none;
 }
 .sidenav a {
-    font-weight: 400;
+    font-weight: 700;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -369,7 +397,7 @@ footer {
 .sidenav a:hover,
 .offcanvas a:focus {
     text-decoration: none;
-    color: #294053;
+    color: #FFD600;
 }
 .sidenav .closebtn {
     position: absolute;
@@ -412,7 +440,7 @@ footer {
     margin-left: 50px;
 }
 .button2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     border-radius: 6px;
     padding-left: 20px;
@@ -420,20 +448,20 @@ footer {
     padding-top: 6px;
     padding-bottom: 6px;
     text-decoration: none;
-    color: #16C584;
+    color: #8AC942;
     background: white;
 }
 .button2:hover {
     text-decoration: none;
     color: white;
-    background: #FACD00;
-    background: -webkit-linear-gradient(left, #FACD00, #16C584);
+    background: #580437;
+    background: -webkit-linear-gradient(left, #580437, #FB0033);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, #FACD00, #16C584);
+    background: -o-linear-gradient(left, #580437, #FB0033);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, #FACD00, #16C584);
+    background: -moz-linear-gradient(left, #580437, #FB0033);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #FACD00, #16C584);
+    background: linear-gradient(to right, #580437, #FB0033);
     /* Standard syntax */
 }
 .letter {
@@ -515,14 +543,14 @@ div.modal-content {
     height: 180px;
 }
 .exit {
-    color: #FACD00;
+    color: #580437;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 .exit:hover,
 .exit:focus {
-    color: #19CEC4;
+    color: #1D2059;
     text-decoration: none;
     cursor: pointer;
 }
@@ -553,7 +581,7 @@ div.modal-content {
     transition: all linear 0.15s;
     /* Type */
     text-decoration: none;
-    color: #294053;
+    color: black;
     font-family: "Helvetica", sans-serif !important;
     font-weight: 400 !important;
     font-size: 20px !important;
@@ -562,7 +590,7 @@ div.modal-content {
 .accordion-section-title.active {
     /* Type */
     text-decoration: none;
-    color: #16C584;
+    color: #FB0033;
     text-shadow: none;
 }
 .accordion-section-title:hover {
@@ -588,7 +616,7 @@ input{
     width: 100%;
     
     padding: 12px 20px;
-    border-color: #16C584;
+    border-color: #FB0033;
     box-shadow: none;
     border-style: solid;
     border-width: thin;
@@ -602,7 +630,7 @@ textArea{
         padding: 12px 20px;
         box-sizing: border-box;
         resize: none;
-        border-color: #16C584;
+        border-color: #FB0033;
 }
 textArea:focus{
     outline:none;
@@ -640,8 +668,16 @@ textArea:focus{
         margin-bottom: 100px;
     }
 }
+
+
+
+
+
+
 @media screen and (max-width: 1024px) {
+    
     .hamburger {
+        display: block;
         visibility: visible;
         position: fixed;
         top: 10px;
@@ -654,11 +690,11 @@ textArea:focus{
         position: fixed;
         top: 10px;
         left: 10px;
-        color: #294053;
+        color: black;
         transition: all 0.25 ease;
     }
     .hChangeStyle {
-        color: #294053;
+        color: black;
     }
     .topnav {
         visibility: hidden;
@@ -703,7 +739,8 @@ textArea:focus{
         display: block;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+    
     .svgMargin {
         margin: 75px;
     }
@@ -718,6 +755,33 @@ textArea:focus{
         padding: 0;
         width: 90%;
     }
+
+}
+@media screen and (max-width: 500px){
+    h2{
+        font-size: 10px;
+    }
+     .squareDiv {
+        margin: 0;
+        margin-bottom: 100px;
+    }
+    .fullsizeImg{
+        width: auto;
+        height: auto;
+    }
+    .withDoubleMargins{
+        margin-left: 0px;
+        margin-right: 0px;   
+    }
+    .mobileMargins{
+        margin-left: 60px;
+    margin-right: 60px;
+    }
+    .withMainMargins {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
 }
 @media screen and (max-width: 320px) {
     .withMainMargins {
