@@ -53,19 +53,7 @@ a:hover{
     width: 70px;
 }
 .logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #8AC942;
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(right top, #FFD600, #8AC942, #FACC00);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom left, #FFD600, #8AC942, #FACC00);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom left, #FFD600, #8AC942, #FACC00);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom left, #FFD600, #8AC942, #FACC00);
-    /* Standard syntax (must be last) */
+    
 }
 .big {
     font-size: 5em;
@@ -315,15 +303,8 @@ button {
     text-align: right;
 }
 .gradient {
-    background: #FB0033;
-    background: -webkit-linear-gradient(left, #1D2059, #FB0033);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #1D2059, #FB0033);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #1D2059, #FB0033);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #1D2059, #FB0033);
-    /* Standard syntax */
+    background: #FFD600;
+
 }
 .diagGradient {
     background: #1D2059;
@@ -384,6 +365,7 @@ footer {
     overflow-x: hidden;
     padding-top: 60px;
     text-decoration: none;
+    background-color: black;
 }
 .sidenav a {
     font-weight: 700;
@@ -616,7 +598,7 @@ input{
     width: 100%;
     
     padding: 12px 20px;
-    border-color: #FB0033;
+    border-color: black;
     box-shadow: none;
     border-style: solid;
     border-width: thin;
@@ -630,7 +612,7 @@ textArea{
         padding: 12px 20px;
         box-sizing: border-box;
         resize: none;
-        border-color: #FB0033;
+        border-color: black;
 }
 textArea:focus{
     outline:none;
@@ -666,6 +648,9 @@ textArea:focus{
         margin: 15px;
         margin-top: 20px;
         margin-bottom: 100px;
+    }
+    .circle{
+        visibility: hidden;
     }
 }
 
