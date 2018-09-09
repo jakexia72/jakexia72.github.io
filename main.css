@@ -339,7 +339,7 @@ footer {
 .circle{
     background-size: cover;
     background-position: center;
-    border-radius: 100%
+    /*border-radius: 100%*/
 }
 
 
