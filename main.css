@@ -727,6 +727,9 @@ textArea:focus{
     .hiddenOnMobile{
         visibility: hidden;
     }
+    p{
+        font-size: 10px;
+    }
 }
 @media screen and (max-width: 600px) {
     .jumbotron h1 {
