@@ -733,6 +733,12 @@ textArea:focus{
     .footer ul {
         display: block;
     }
+    .hiddenOnMobile{
+        visibility: hidden;
+    }
+    .addPaddingMobile{
+        padding: 15px !important;
+    }
 }
 @media screen and (max-width: 768px) {
     
