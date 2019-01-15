@@ -45,7 +45,7 @@ var main = function () {
     }
 
 $('#fullsizeDiv1').height($('#row1').height());
-    $('#fullsizeDiv2').height($('#row2').height());
+    //$('#fullsizeDiv2').height($('#row2').height());
      $('#fullsizeDiv3').height($('#row3').height());
 $('#fullsizeDiv6').height($('#row6').height());
     $('#fullsizeDiv4').height($('#row4').height());

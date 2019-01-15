@@ -14,6 +14,7 @@ h2 {
     font-family: "Montserrat", sans-serif; !important;
     font-weight: 700 !important;
     font-size: 40px !important;
+    margin-top: 0;
 }
 h3 {
     font-family: "Montserrat", sans-serif !important;
@@ -28,7 +29,7 @@ h4 {
 }
 p {
     padding-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Arvo", sans-serif;
     color: #2A2A2A;
     letter-spacing: .012em;
@@ -59,10 +60,11 @@ a:hover{
     font-size: 5em;
 }
 .squareDiv {
-    margin: 75px;
+   
 }
 .sideDiv {
-    margin: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 .svgMargin {
     margin: 75px;
@@ -242,11 +244,22 @@ ul.staticTopnav li {
 .space {
     height: 50px;
 }
+.smallerSpace {
+    height: 25px;
+}
 .addSpacer {
     margin-bottom: 30px;
 }
 button {
     border: none;
+}
+.contactLink{
+    text-decoration: none;
+    color: #FFD600 !important;
+}
+.contactLink:hover{
+    text-decoration: none;
+    color: #C7D0D4 !important;
 }
 .button {
     font-family: "Montserrat", sans-serif;
@@ -336,7 +349,7 @@ footer {
 }
 .footer {
 }
-.circle{
+.coverBackground{
     background-size: cover;
     background-position: center;
     /*border-radius: 100%*/
@@ -648,9 +661,6 @@ textArea:focus{
         margin: 15px;
         margin-top: 20px;
         margin-bottom: 100px;
-    }
-    .circle{
-        visibility: hidden;
     }
 }
 
