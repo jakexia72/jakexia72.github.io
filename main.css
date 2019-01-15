@@ -723,6 +723,11 @@ textArea:focus{
         margin-bottom: 100px;
     }
 }
+@media screen and (max-width: 800px) {
+    .hiddenOnMobile{
+        visibility: hidden;
+    }
+}
 @media screen and (max-width: 600px) {
     .jumbotron h1 {
         font-size: 250% !important;
@@ -732,9 +737,6 @@ textArea:focus{
     }
     .footer ul {
         display: block;
-    }
-    .hiddenOnMobile{
-        visibility: hidden;
     }
     .addPaddingMobile{
         padding: 15px !important;
