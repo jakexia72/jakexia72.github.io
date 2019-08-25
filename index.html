@@ -1,69 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="scripts.js"></script>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
-    <script src="scripts.js"></script>
-
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class = "landing">
+  <link rel="stylesheet" href="style.css">
+  <title>🥑 Jake Xia</title>
+</head>
+<body>
+  <!-- side bar -->
+  <div class = "utility-sidebar">
+    <div id = "hamburgerClose" class = "menuButton unselectable">
+      <div class = "xline xline-t"></div>
+      <div class = "xline xline-b"></div>
     </div>
-    <div class = "content">
-      <div class = "stickySectionIndicator-container">
-        <div class = "stickySectionIndicator-heading">
-            PROJECTS
+    <div id = "hamburgerOpen" class = "menuButton unselectable">
+      <div class = "mline"></div>
+      <div class = "mline"></div>
+      <div class = "mline"></div>
+    </div>
+    <div class = "vertical-section-indicator">
+      Welcome
+    </div>
+  </div>
+
+  <!-- landing page -->
+  <div class = "landing">
+  </div>
+
+  <!-- contents -->
+  <div class = "contents">
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">
+        PROJECTS
+      </div>
+    </div>
+    <div class = "project-list">
+      <div class = "project">
+        <div class = "project-img" style="background:grey;"></div>
+        <div class = "project-description" style = "">
+          TEST
         </div>
       </div>
-      <h2>This is a test. THIS IS A TEST</h2>
-      <h3>This is a test. THIS IS A TEST</h3>
-      <h4>This is a test. THIS IS A TEST</h4>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h6>This is a test. THIS IS A TEST</h6>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h2>This is a test. THIS IS A TEST</h2>
-      <h3>This is a test. THIS IS A TEST</h3>
-      <h4>This is a test. THIS IS A TEST</h4>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h6>This is a test. THIS IS A TEST</h6>
-      <h4>This is a test. THIS IS A TEST</h4>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h6>This is a test. THIS IS A TEST</h6>
-      <h3>This is a test. THIS IS A TEST</h3>
-      <h4>This is a test. THIS IS A TEST</h4>
-      <h5 id ="newSection">NEW</h5>
-        </div>
-      <h6>This is a test. THIS IS A TEST</h6>
-      <h2>This is a test. THIS IS A TEST</h2>
-      <h3>This is a test. THIS IS A TEST</h3>
-      <h4>This is a test. THIS IS A TEST</h4>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
+      <div class = "project project-odd">
+        <div class = "project-img" style="background:grey;"></div>
+        <div class = "project-description" style = ""></div>
+      </div>
+      <div class = "project">
+        <div class = "project-img" style="background:grey;"></div>
+        <div class = "project-description" style = ""></div>
+      </div>
+    </div>
+  </div>
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">
+        EXPLORATIONS
+      </div>
+    </div>
+    <div class = "exploration-list">
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography →</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography →</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral">01</div>
+        <div class = "exploration-img" style="background:grey;"></div>
+        <p>Photography</p>
+      </div>
+    </div>
+  </div>
 
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h5>This is a test. THIS IS A TEST</h5>
-      <h6>This is a test. THIS IS A TEST</h6>
+    <h2>This is a test. THIS IS A TEST</h2>
+    <h3>This is a test. THIS IS A TEST</h3>
+    <h4>This is a test. THIS IS A TEST</h4>
+    <h5>This is a test. THIS IS A TEST</h5>
+    <h6>This is a test. THIS IS A TEST</h6>
+    <h5>This is a test. THIS IS A TEST</h5>
+    <h2>This is a test. THIS IS A TEST</h2>
+    <h3>This is a test. THIS IS A TEST</h3>
+    <h4>This is a test. THIS IS A TEST</h4>
+    <h5>This is a test. THIS IS A TEST</h5>
+    <h6>This is a test. THIS IS A TEST</h6>
+    <h4>This is a test. THIS IS A TEST</h4>
+    <h5>This is a test. THIS IS A TEST</h5>
+    <h6>This is a test. THIS IS A TEST</h6>
+    <h3>This is a test. THIS IS A TEST</h3>
+    <h4>This is a test. THIS IS A TEST</h4>
+    <h5 id ="newSection">NEW</h5>
+  </div>
+  <h6>This is a test. THIS IS A TEST</h6>
+  <h2>This is a test. THIS IS A TEST</h2>
+  <h3>This is a test. THIS IS A TEST</h3>
+  <h4>This is a test. THIS IS A TEST</h4>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h5>This is a test. THIS IS A TEST</h5>
+  <h6>This is a test. THIS IS A TEST</h6>
 
 
-  </body>
+</div>
+</body>
 </html>
