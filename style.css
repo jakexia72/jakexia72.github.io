@@ -3,51 +3,178 @@ body{
   height: 100vh;
   padding: 0;
   margin: 0;
+  font-family: 'Chivo', sans-serif;
 }
+a{
+  text-decoration: none;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  background: blue;
+}
+.col-half{
+  width: 50%;
+}
+.profile-image{
+  height: 64vh;
+  width: 48vh;
+  align-self: flex-end;
+  margin-left: 16px;
+  background-size: cover;
+  background-position: bottom;
+
+}
+.whiteText{
+  color: white;
+}
+.whiteBackground{
+  background-color: white;
+}
+.darkText{
+  color: #0e0e0e;
+}
+.darkBackground{
+  background-color: #0e0e0e;
+}
+.mainColorBackground{
+  background-color: #FFD600;
+}
+
 .menuButton{
   width: 32px;
   height: 32px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 1000 !important;
 }
 .mline{
   position: relative;
-  background-color: white;
   width: 100%;
-  height: 10%;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  height: 5%;
+  margin-top: 20%;
+  margin-bottom: 20%;
   -webkit-transition: 0.2s ease;
 }
 .xline{
   position: absolute;
   top:50%;
-  background-color: white;
-  width: 100%;
-  height: 10%;
+  width: 0;
+  height: 5%;
 }
 
 .xline-t {
   transform-origin: left center;
- transform: translate(15%,275%) rotate(-45deg);
+ transform: translate(4.5px,10px) rotate(-45deg);
   -webkit-transition: 0.1s ease;
-/*   width: 100% !important; */
 }
 
 .xline-b {
    transform-origin: left center;
- transform: translate(15%, -475%) rotate(45deg);
+ transform: translate(4.5px, -12.5px) rotate(45deg);
   -webkit-transition: 0.2s ease;
 /*    width: 100% !important;  */
 }
 
+.toggleOpen{
+  width: 0px !important;
+}
+.toggleClose {
+  width: 100% !important;
+}
+
+#mainMenu{
+  z-index:10 !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  -webkit-transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.mainMenuOpen{
+    height: 100vh !important;
+}
+.mainMenu-container{
+  display: flex;
+  justify-content: space-between;
+  width: 64%;
+  height: 48%;
+  overflow: hidden;
+}
+.mainMenu-menu{
+  align-self: flex-start;
+}
+.mainMenu-links{
+  align-self: flex-end;
+}
+.menu-options{
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.links-options{
+  text-align: right;
+}
+
+
+#mainMenu ul{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+#mainMenu li{
+  margin-bottom: 16px;
+}
+
+#mainMenu .menu-options a{
+  text-decoration: none;
+}
+
+#mainMenu .menu-options a::after{
+    content: '';
+    display: block;
+    width: 0;
+    transform: translateY(-8px);
+    height: 3px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+#mainMenu .menu-options a:hover::after{
+  width: 100%;
+}
+.addAnimatedUnderline::after{
+  content: '';
+  display: block;
+  width: 100%;
+  margin-left: 100%;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+.addAnimatedUnderline:hover::after{
+  margin-left: 0;
+}
+
 .utility-sidebar{
+  z-index: 9;
   position: fixed;
   top: 24px;
   left: 24px;
-  background: lightblue;
   width: 32px;
   height: calc(100vh - 48px);
   display: flex;
@@ -57,6 +184,9 @@ body{
 
 .vertical-section-indicator{
    transform: rotate(-90deg);
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   font-size: 0.8em;
 }
 
 .contents{
@@ -77,26 +207,29 @@ body{
 }
 
 .stickySectionIndicator-container{
-
-
-
   width: 100%;
   height: 50vh;
   top: 25vh;
-  background: lightblue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 72%;
   z-index: -7;
   position: -webkit-sticky;
   position: sticky;
   /* bottom: 1rem; */
   align-self: flex-end;
-
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
+  /* style = "background-image:url(img/svg/projects-d.svg);" */
 }
+
 .stickySectionIndicator-heading{
-  background: grey;
+  color: #FFD600;
+  font-size: 3em;
+  letter-spacing: 0.3em;
+
 }
 
 .project-list{
@@ -149,10 +282,10 @@ transform: translate3d(0, 0, 0);
   margin-right: -16px;
 }
 .exploration{
-  margin-left: 16px;
+  margin-left: 36px;
 }
 .exploration-img{
-  height: 48vh;
-  width: 36vh;
+  height: 64vh;
+  width: 48vh;
   margin-bottom: 8px;
 }

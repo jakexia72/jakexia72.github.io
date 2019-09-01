@@ -3,48 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
-  <script src="scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,700&display=swap" rel="stylesheet">
+
+
+  <script src="scripts.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="style.css">
   <title>🥑 Jake Xia</title>
 </head>
 <body>
+  <!-- nav menu -->
+  <div id = "mainMenu" class = "mainColorBackground">
+    <div class = "mainMenu-container">
+      <div class = "mainMenu-menu">
+        <ul class = "menu-options">
+          <li><a class = "darkText" href="#projects">Projects</a></li>
+          <li><a class = "darkText" href="#explorations">Explorations</a></li>
+          <li><a class = "darkText" href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class = "mainMenu-links">
+        <ul class = "links-options">
+          <li><a href="mailto:jakexia72@hotmail.com" class = "darkText addAnimatedUnderline">Email</a></li>
+          <li><a href = "https://github.com/jakexia72"class = "darkText addAnimatedUnderline">Github</a></li>
+          <li><a href = "Jake's CV.pdf"class = "darkText addAnimatedUnderline">Résumé</a></li>
+          <li><a href = "https://www.linkedin.com/in/jakexia" class = "darkText addAnimatedUnderline">LinkedIn</a></li>
+          <li><a href = "https://www.instagram.com/jake.xia.jpeg" class = "darkText addAnimatedUnderline">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id = "hamburgerClose" class = "menuButton">
+    <div class = "xline xline-t darkBackground"></div>
+    <div class = "xline xline-b darkBackground"></div>
+  </div>
+  <div id = "hamburgerOpen" class = "menuButton">
+    <div class = "mline whiteBackground"></div>
+    <div class = "mline whiteBackground"></div>
+    <div class = "mline whiteBackground"></div>
+  </div>
+
+
   <!-- side bar -->
   <div class = "utility-sidebar">
-    <div id = "hamburgerClose" class = "menuButton unselectable">
-      <div class = "xline xline-t"></div>
-      <div class = "xline xline-b"></div>
-    </div>
-    <div id = "hamburgerOpen" class = "menuButton unselectable">
-      <div class = "mline"></div>
-      <div class = "mline"></div>
-      <div class = "mline"></div>
-    </div>
-    <div class = "vertical-section-indicator">
-      Welcome
+    <div id = "vSectionIndicator" class = "vertical-section-indicator whiteText">
+      welcome
     </div>
   </div>
 
   <!-- landing page -->
+  <div data-id="welcome" class = "switch"></div>
   <div class = "landing">
   </div>
 
+  <div id ="changeNavColor"></div>
+
   <!-- contents -->
   <div class = "contents">
+  <div id="projects" class = "spacer"></div>
+  <div data-id="projects" class = "switch"></div>
   <div class = "section-withStickyIndicator">
     <div class = "stickySectionIndicator-container">
-      <div class = "stickySectionIndicator-heading">
-        PROJECTS
-      </div>
+      <div class = "stickySectionIndicator-heading">PROJECTS</div>
     </div>
     <div class = "project-list">
       <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description" style = "">
+        <div class = "project-description">
           <h1>TEST</h1>
         </div>
       </div>
@@ -58,6 +87,7 @@
       </div>
     </div>
   </div>
+  <div data-id="explorations" class = "switch"></div>
   <div class = "section-withStickyIndicator">
     <div class = "stickySectionIndicator-container">
       <div class = "stickySectionIndicator-heading">
@@ -96,6 +126,21 @@
         <p>Photography</p>
       </div>
     </div>
+  </div>
+
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">ABOUT</div>
+    </div>
+    <div class = "row">
+      <div class = "col col-half">
+        <div class = "profile-image" style = "background-image: url(img/2.jpg)"></div>
+      </div>
+      <div class = "col col-half">
+
+      </div>
+    </div>
+
   </div>
 
     <h2>This is a test. THIS IS A TEST</h2>
