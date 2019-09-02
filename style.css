@@ -8,6 +8,50 @@ body{
 a{
   text-decoration: none;
 }
+a:visited{
+  color: inherit;
+}
+.spacer{
+  height: 24px;
+}
+.link{
+  text-decoration: underline;
+}
+.link:hover{
+  color: #FFD600;
+}
+.linkWithArrow{
+
+}
+.linkWithArrow::after{
+  content: " →";
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  -ms-transition: .2s ease;
+  transition: .2s ease;
+}
+.linkWithArrow:hover::after{
+  padding-left: 16px;
+}
+h1{
+  font-weight: normal;
+}
+h2{
+  font-weight: normal;
+}
+h4{
+  font-weight: normal;
+}
+p{
+  line-height: 1.5em;
+}
+ul{
+  margin-left: 0px;
+}
+li{
+  margin-top: 16px;
+}
 .row{
   display: flex;
   flex-direction: row;
@@ -15,21 +59,27 @@ a{
   width: 100%;
 }
 .col{
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: blue;
+  align-content: center;
 }
-.col-half{
-  width: 50%;
+.col-30{
+  flex-basis: 33vw;
+  flex-grow: 1;
+}
+.col-50{
+  flex-basis: 55vw;
+  flex-grow: 1;
 }
 .profile-image{
-  height: 64vh;
-  width: 48vh;
+  height: 320px;
+  width: 240px;
   align-self: flex-end;
-  margin-left: 16px;
+  margin-right: 16px;
   background-size: cover;
   background-position: bottom;
-
+  background-image: url(img/lookDOWN.jpg);
 }
 .whiteText{
   color: white;
@@ -42,6 +92,18 @@ a{
 }
 .darkBackground{
   background-color: #0e0e0e;
+}
+.readingText{
+  color: #444C58;
+}
+.lightText{
+  color: #888;
+}
+.lightBackground{
+  background-color: #888;
+}
+.mainColorText{
+  color: #FFD600;
 }
 .mainColorBackground{
   background-color: #FFD600;
@@ -190,14 +252,16 @@ a{
 }
 
 .contents{
-    margin-left: 64px;
+    margin-left: 80px;
 }
 
 .landing{
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: tomato;
+  background-image: url(img/bg.jpg);
+  background-position: bottom;
+  background-size: cover;
   border: 16px solid white;
 }
 
@@ -229,16 +293,23 @@ a{
   color: #FFD600;
   font-size: 3em;
   letter-spacing: 0.3em;
-
 }
 
 .project-list{
 
 }
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag{
+  padding-right: 16px;
+}
 
 .project{
   display: flex;
   flex-direction: column;
+  padding-bottom: 16px;
 }
 
 .project-odd{
@@ -246,20 +317,20 @@ a{
 }
 
 .project-img{
-  height: 40vh;
+  height: 40vw;
   width: 50vw;
 }
 
 .project-description{
   position: relative;
-  height: calc(40vh - 32px);
-  width: calc(50vw - 32px);
-  margin: 16px;
+  width: calc(50vw - 64px);
+  padding: 32px;
+  max-width: 500px;
 }
 
-.project-description:before{
+.addBlur:before{
   -webkit-transform: translate3d(0, 0, 0);
-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   content: "";
   position: absolute;
   bottom: 0px;
@@ -280,12 +351,200 @@ transform: translate3d(0, 0, 0);
   flex-direction: row;
   overflow: scroll;
   margin-right: -16px;
+  margin-left: -64px;
 }
+.exploration-list::-webkit-scrollbar {
+  display: none;
+}
+
 .exploration{
   margin-left: 36px;
 }
+.exploration-spacer{
+  margin-left: 200px;
+}
+
 .exploration-img{
   height: 64vh;
   width: 48vh;
   margin-bottom: 8px;
+}
+
+.about-text{
+  margin-left: 16px;
+  max-width: 500px;
+}
+
+
+.contact-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 4em;
+  position: relative;
+}
+.contact-container li{
+  position: relative;
+  margin: 16px;
+}
+.contact-container a::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    width: 0;
+    transform: translateY(-8px);
+    height: 80px;
+    background: #FFD600;
+    transition: 0.3s ease;
+}
+
+.contact-container a:hover::after{
+  width: 100%;
+}
+
+/* For Desktop */
+@media only screen and (min-width: 1200px){
+  p{
+    text-align: justify;
+  }
+}
+
+/* For big desktops */
+@media only screen and (min-width: 1800px){
+
+}
+
+
+/* For tablets */
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .about-text{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+@media only screen and (min-width: 900px){
+  .about-text{
+    margin-top: 10vh;
+    margin-left: 36px;
+    margin-right: 16px;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .landing{
+    border: 8px solid white;
+  }
+  .utility-sidebar{
+    top: 16px;
+    left: 16px;
+    width: 24px;
+    height: calc(100vh - 32px);
+  }
+  .vertical-section-indicator{
+    font-size: 0.4em;
+    letter-spacing: 0.025em;
+  }
+  .menuButton{
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+  }
+  .contents{
+    margin-left: 64px;
+  }
+  .project-img{
+    height: 48vw;
+    width: 64vw;
+  }
+  .section-withStickyIndicator{
+    margin-right: 8px;
+  }
+  .exploration-list{
+    margin-right: -8px;
+  }
+}
+
+
+/* For phones */
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+  .stickySectionIndicator-heading{
+    font-size: 1em;
+    letter-spacing: 0.1em;
+  }
+}
+@media only screen and (min-width: 321px) and (orientation: portrait) {
+  .menu-options{
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 599px) and (orientation: portrait){
+  .menu-options{
+    font-size: 2.2em;
+  }
+  .mainMenu-container{
+    flex-direction: column;
+    width: 80%;
+    height: 64%;
+  }
+  .stickySectionIndicator-heading{
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+  }
+  .project-img{
+    height: 40vh;
+    width: 100%;
+  }
+  .project{
+    margin-bottom: 56px;
+  }
+  .project-description{
+    position: relative;
+    width: calc(100% - 32px);
+    padding: 16px;
+  }
+  .profile-image{
+    margin-right: 0px;
+  }
+  .about-text{
+    margin-left: 0;
+    margin-right: 16px;
+  }
+  .contact-container ul{
+    font-size: 2em;
+  }
+  .contact-container a::after{
+    height: 40px;
+  }
+
+}
+@media only screen and (max-width: 800px) and (orientation: landscape){
+  .menu-options{
+    font-size: 2em;
+  }
+  .mainMenu-container{
+    flex-direction: row;
+    width: 80%;
+    height: 64%;
+  }
+  .col-30{
+    flex-basis: 55vw;
+  }
+
+  .about-text{
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }

@@ -52,7 +52,7 @@ $('#hamburgerOpen').click(function(){
   }
 })
 
-$('.addUnderLine').click(function(){
+$('.menuOption').click(function(){
  menuIsOpening = false;
     hideXLines();
     closeMenu();
@@ -121,21 +121,21 @@ function changeHamburgerColor(){
 	}
 }
 
-$(document).mouseup(function(e){
-    let container = $("#mainMenu");
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0){
-    	menuIsOpening = false;
-    	hideXLines();
-    	closeMenu();
-    }
-});
+// $(document).mouseup(function(e){
+//     let container = $("#mainMenu");
+//     // if the target of the click isn't the container nor a descendant of the container
+//     if (!container.is(e.target) && container.has(e.target).length === 0){
+//     	menuIsOpening = false;
+//     	hideXLines();
+//     	closeMenu();
+//     }
+// });
 
 
 function findSection(){
   let sections = document.getElementsByClassName('switch');
   for (let i = (sections.length-1); i >= 0; i --){
-    if($(this).scrollTop() >= $(sections[i]).position().top - 100){
+    if($(this).scrollTop() >= $(sections[i]).position().top - ($(window).height()/2)){ //- ($(window).height/2))
         return $(sections[i]).data('id');
     }
   }
@@ -168,18 +168,38 @@ function checkSectionChange(){
 	// 	}
 	// }
 
+function checkWhereToLook(){
+	if($(this).scrollTop() >= $("#dp").offset().top - ($( window ).height()*0.60) && $(this).scrollTop() <= $("#dp").offset().top - ($( window ).height()*0.10)){
+		console.log($(this).scrollTop() + " : " + $("#dp").offset().top);
+		$("#dp").css('background-image','url(img/lookUP.jpg)')
+	} else if($('#dp').css('background-image') != 'url(img/lookDOWN.jpg)'){
+		$("#dp").css('background-image','url(img/lookDOWN.jpg)')
+	}
+}
+
 //document scroll detection
 $(document).on('scroll', function() {
 	checkSectionChange();
 	changeHamburgerColor();
 	changeVIndicatorColor();
+	checkWhereToLook();
 });
 
 
+var d = new Date();
+function timeOfDay(){
+	time = d.getHours();
+  if(time < 12){
+    return "Morning";
+  } else if (time < 17){
+    return "Afternoon";
+  } else if (time < 24){
+    return "Evening";
+  }
+}
 
-
+	$("#timeOfDay").html(timeOfDay());
 	//set the copyright to the current year
-	var d = new Date();
-	$("#date").html(d.getFullYear());
+	$("#year").html(d.getFullYear());
 
 });

@@ -9,6 +9,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,700&display=swap" rel="stylesheet">
 
+  <script src="three.min.js" type = "text/javascript"></script>
 
   <script src="scripts.js" type="text/javascript"></script>
 
@@ -21,9 +22,9 @@
     <div class = "mainMenu-container">
       <div class = "mainMenu-menu">
         <ul class = "menu-options">
-          <li><a class = "darkText" href="#projects">Projects</a></li>
-          <li><a class = "darkText" href="#explorations">Explorations</a></li>
-          <li><a class = "darkText" href="#about">About</a></li>
+          <li><a class = "menuOption darkText" href="#projects">Projects</a></li>
+          <li><a class = "menuOption darkText" href="#explorations">Explorations</a></li>
+          <li><a class = "menuOption darkText" href="#about">About</a></li>
         </ul>
       </div>
       <div class = "mainMenu-links">
@@ -57,15 +58,15 @@
 
   <!-- landing page -->
   <div data-id="welcome" class = "switch"></div>
-  <div class = "landing">
+  <div id="scene-container" class = "landing">
+
   </div>
 
   <div id ="changeNavColor"></div>
 
   <!-- contents -->
   <div class = "contents">
-  <div id="projects" class = "spacer"></div>
-  <div data-id="projects" class = "switch"></div>
+  <div data-id="projects" id="projects" class = "switch"></div>
   <div class = "section-withStickyIndicator">
     <div class = "stickySectionIndicator-container">
       <div class = "stickySectionIndicator-heading">PROJECTS</div>
@@ -73,21 +74,35 @@
     <div class = "project-list">
       <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description">
-          <h1>TEST</h1>
+        <div class = "project-description addBlur">
+          <h4 class = "lightText">1/5</h4>
+          <h2>Queueue (web app)</h2>
+          <div class = "tags">
+            <div class = "tag lightText">firebase</div>
+            <div class = "tag lightText">node.js</div>
+            <div class = "tag lightText">jQuery</div>
+            <div class = "tag lightText">bootstrap</div>
+          </div>
+          <p class = "readingText">
+            (Pronounced 'queue - you') - Waiting rooms suck, so Queueue takes the 'room' out of the equation, allowing patients to wait from anywhere and get real-time updates about their virtual journey in the line.
+          </p>
+          <div class = "spacer"></div>
+          <a href="#" class = "linkWithArrow darkText">read</a>
         </div>
       </div>
       <div class = "project project-odd">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description" style = ""></div>
+        <div class = "project-description addBlur" style = ""></div>
       </div>
       <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description" style = ""></div>
+        <div class = "project-description addBlur" style = ""></div>
       </div>
     </div>
   </div>
-  <div data-id="explorations" class = "switch"></div>
+
+  <div data-id="explorations" id="explorations" class = "switch"></div>
+
   <div class = "section-withStickyIndicator">
     <div class = "stickySectionIndicator-container">
       <div class = "stickySectionIndicator-heading">
@@ -95,10 +110,13 @@
       </div>
     </div>
     <div class = "exploration-list">
+      <div class = "exploration exploration-spacer lightText" style="text-align:right; margin-top:32vh; font-size:2em">
+         <br /> ←
+      </div>
       <div class = "exploration">
         <div class = "numeral">01</div>
         <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography →</p>
+        <a href="#" class = "linkWithArrow darkText">Photography</a>
       </div>
       <div class = "exploration">
         <div class = "numeral">01</div>
@@ -124,68 +142,59 @@
         <div class = "numeral">01</div>
         <div class = "exploration-img" style="background:grey;"></div>
         <p>Photography</p>
+      </div>
+      <div class = "exploration-spacer">
+        &nbsp;
       </div>
     </div>
   </div>
+
+  <div data-id="about" id = "about" class = "switch"></div>
 
   <div class = "section-withStickyIndicator">
     <div class = "stickySectionIndicator-container">
       <div class = "stickySectionIndicator-heading">ABOUT</div>
     </div>
     <div class = "row">
-      <div class = "col col-half">
-        <div class = "profile-image" style = "background-image: url(img/2.jpg)"></div>
+      <div class = "col col-30">
+        <div id = "dp" class = "profile-image" style = ""></div>
       </div>
-      <div class = "col col-half">
-
+      <div class = "col col-50 addBlur">
+        <div class ="about-text">
+          <h1><i>*Aspiring*</i> Engineer</h1>
+          <p class = "readingText">
+            Good <span id="timeOfDay">time of day</span>! I’m currently a 2nd year mechatronics engineering student at the University of Waterloo. I am deeply interested in the intersection of software, hardware, design and how these disciplines can be used sustainably to prevent the end of the world.
+            <br/>
+            <br/>
+            Currently,
+            <ul class ="readingText">
+              <li>Reading <a class = "link" href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a> by Don Norman</li>
+              <li>Tending to the garden on my window sill</li>
+              <li>Trying to automate the production of my morning panini</li>
+            </ul>
+          </p>
+        </div>
       </div>
     </div>
-
   </div>
 
-    <h2>This is a test. THIS IS A TEST</h2>
-    <h3>This is a test. THIS IS A TEST</h3>
-    <h4>This is a test. THIS IS A TEST</h4>
-    <h5>This is a test. THIS IS A TEST</h5>
-    <h6>This is a test. THIS IS A TEST</h6>
-    <h5>This is a test. THIS IS A TEST</h5>
-    <h2>This is a test. THIS IS A TEST</h2>
-    <h3>This is a test. THIS IS A TEST</h3>
-    <h4>This is a test. THIS IS A TEST</h4>
-    <h5>This is a test. THIS IS A TEST</h5>
-    <h6>This is a test. THIS IS A TEST</h6>
-    <h4>This is a test. THIS IS A TEST</h4>
-    <h5>This is a test. THIS IS A TEST</h5>
-    <h6>This is a test. THIS IS A TEST</h6>
-    <h3>This is a test. THIS IS A TEST</h3>
-    <h4>This is a test. THIS IS A TEST</h4>
-    <h5 id ="newSection">NEW</h5>
+  <div data-id="contact" class = "switch"></div>
+  <div class = "section-withStickyIndicator">
+    <div class = "contact-container">
+      <ul class = "">
+        <li><a href="mailto:jakexia72@hotmail.com" class = "darkText ">Email</a></li>
+        <li><a href = "https://github.com/jakexia72"class = "darkText ">Github</a></li>
+        <li><a href = "Jake's CV.pdf"class = "darkText">Résumé</a></li>
+        <li><a href = "https://www.linkedin.com/in/jakexia" class = "darkText ">LinkedIn</a></li>
+        <li><a href = "https://www.instagram.com/jake.xia.jpeg" class = "darkText ">Instagram</a></li>
+      </ul>
+    </div>
   </div>
-  <h6>This is a test. THIS IS A TEST</h6>
-  <h2>This is a test. THIS IS A TEST</h2>
-  <h3>This is a test. THIS IS A TEST</h3>
-  <h4>This is a test. THIS IS A TEST</h4>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h5>This is a test. THIS IS A TEST</h5>
-  <h6>This is a test. THIS IS A TEST</h6>
-
-
 </div>
+<footer>
+    <p class = "lightText" style="text-align: center;"> &copy; <span id="year">date</span> Jake Xia</p>
+</footer>
+<script src="3D.js" type="text/javascript"></script>
+
 </body>
 </html>
