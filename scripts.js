@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-
+//AOS.init();
 	//smooth scrolling to anchor element on page
 	$(function () {
 		$('a[href*="#"]:not([href="#"])').click(function () {
@@ -185,6 +185,12 @@ $(document).on('scroll', function() {
 	checkWhereToLook();
 });
 
+var projects = $('.project');
+var projectCounters = $('.project-counter');
+console.log(projects.length);
+for(let i = 0; i < projectCounters.length; i++){
+	projectCounters[i].innerHTML = (i+1) + "/" + projectCounters.length;
+}
 
 var d = new Date();
 function timeOfDay(){

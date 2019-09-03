@@ -52,6 +52,9 @@ ul{
 li{
   margin-top: 16px;
 }
+.mobileOnly{
+  display: none;
+}
 .row{
   display: flex;
   flex-direction: row;
@@ -260,14 +263,42 @@ li{
   height: 100%;
   box-sizing: border-box;
   background-image: url(img/bg.jpg);
-  background-position: bottom;
+  background-position: center;
   background-size: cover;
   border: 16px solid white;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-text{
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.2em;
 }
 
 .section-withStickyIndicator{
   margin-right: 16px;
   align-items: flex-start;
+}
+.emphasis{
+  font-size: 2em;
 }
 
 .stickySectionIndicator-container{
@@ -296,7 +327,8 @@ li{
 }
 
 .project-list{
-
+  display: flex;
+  flex-direction: column;
 }
 .tags{
   display: flex;
@@ -310,10 +342,11 @@ li{
   display: flex;
   flex-direction: column;
   padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
-.project-odd{
-  align-items: flex-end;
+.project:nth-child(even){
+  align-self: flex-end;
 }
 
 .project-img{
@@ -324,7 +357,7 @@ li{
 .project-description{
   position: relative;
   width: calc(50vw - 64px);
-  padding: 32px;
+  padding: 8px 32px 32px 32px;
   max-width: 500px;
 }
 
@@ -368,6 +401,8 @@ li{
   height: 64vh;
   width: 48vh;
   margin-bottom: 8px;
+  background-size: cover;
+  background-position: center;
 }
 
 .about-text{
@@ -522,11 +557,17 @@ li{
     margin-left: 0;
     margin-right: 16px;
   }
+  .exploration-spacer{
+    margin-left: 104px;
+  }
   .contact-container ul{
     font-size: 2em;
   }
   .contact-container a::after{
     height: 40px;
+  }
+  .mobileOnly{
+    display: block;
   }
 
 }

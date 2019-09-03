@@ -9,8 +9,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,700&display=swap" rel="stylesheet">
 
-  <script src="three.min.js" type = "text/javascript"></script>
-
+  <!-- <script src="three.min.js" type = "text/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
   <script src="scripts.js" type="text/javascript"></script>
 
   <link rel="stylesheet" href="style.css">
@@ -58,8 +58,16 @@
 
   <!-- landing page -->
   <div data-id="welcome" class = "switch"></div>
-  <div id="scene-container" class = "landing">
+  <div class = "landing">
+    <div id="scene-container" class = "bg">
 
+    </div>
+    <div class = "fg">
+      <div  class = "landing-text">
+        <h1>Hello, I'm <br class = "mobileOnly"><span class = "mainColorText emphasis">Jake Xia.</span> </h1>
+        <h1>Welcome to my <br class = "mobileOnly">portfolio.</h1>
+      </div>
+    </div>
   </div>
 
   <div id ="changeNavColor"></div>
@@ -75,7 +83,7 @@
       <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
         <div class = "project-description addBlur">
-          <h4 class = "lightText">1/5</h4>
+          <h4 class = "project-counter lightText">1/5</h4>
           <h2>Queueue (web app)</h2>
           <div class = "tags">
             <div class = "tag lightText">firebase</div>
@@ -90,13 +98,41 @@
           <a href="#" class = "linkWithArrow darkText">read</a>
         </div>
       </div>
-      <div class = "project project-odd">
+      <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description addBlur" style = ""></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>Queueue (web app)</h2>
+          <div class = "tags">
+            <div class = "tag lightText">firebase</div>
+            <div class = "tag lightText">node.js</div>
+            <div class = "tag lightText">jQuery</div>
+            <div class = "tag lightText">bootstrap</div>
+          </div>
+          <p class = "readingText">
+            (Pronounced 'queue - you') - Waiting rooms suck, so Queueue takes the 'room' out of the equation, allowing patients to wait from anywhere and get real-time updates about their virtual journey in the line.
+          </p>
+          <div class = "spacer"></div>
+          <a href="#" class = "linkWithArrow darkText">read</a>
+        </div>
       </div>
       <div class = "project">
         <div class = "project-img" style="background:grey;"></div>
-        <div class = "project-description addBlur" style = ""></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>Queueue (web app)</h2>
+          <div class = "tags">
+            <div class = "tag lightText">firebase</div>
+            <div class = "tag lightText">node.js</div>
+            <div class = "tag lightText">jQuery</div>
+            <div class = "tag lightText">bootstrap</div>
+          </div>
+          <p class = "readingText">
+            (Pronounced 'queue - you') - Waiting rooms suck, so Queueue takes the 'room' out of the equation, allowing patients to wait from anywhere and get real-time updates about their virtual journey in the line.
+          </p>
+          <div class = "spacer"></div>
+          <a href="#" class = "linkWithArrow darkText">read</a>
+        </div>
       </div>
     </div>
   </div>
@@ -114,34 +150,40 @@
          <br /> ←
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <a href="#" class = "linkWithArrow darkText">Photography</a>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/ARKit.gif)"></div>
+        <a href="#" class = "linkWithArrow darkText">iOS AR Face Tracking</a>
+        <p class = "lightText">Built with ARKit and FaceID sensor on iPad Pro</p>
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography</p>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/photography.jpg)"></div>
+        <a href="https://www.instagram.com/jake.xia.jpeg/" class = "linkWithArrow darkText">Photography</a>
+        <p class = "lightText">Some moody photos</p>
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography →</p>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/cuplid.jpg)"></div>
+        <a href="#" class = "linkWithArrow darkText">Flexicap Reuseable Lid</a>
+        <p class = "lightText">Turn any ordinary cup a reusable to-go cup</p>
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography</p>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/planter.jpg)"></div>
+        <a href="#" class = "linkWithArrow darkText">Moisture Controlling Planter</a>
+        <p class = "lightText">3D printed planters that prevent overwatering</p>
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography</p>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/set.jpg)"></div>
+        <a href="#" class = "linkWithArrow darkText">SET! iOS Game</a>
+        <p class = "lightText">Classic game digitized to practice swift</p>
       </div>
       <div class = "exploration">
-        <div class = "numeral">01</div>
-        <div class = "exploration-img" style="background:grey;"></div>
-        <p>Photography</p>
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/printer.jpg)"></div>
+        <a href="#" class = "linkWithArrow darkText">LEGO Plotter</a>
+        <p class = "lightText">Lego Mindstorm, bitmaps, dithering</p>
       </div>
       <div class = "exploration-spacer">
         &nbsp;
@@ -168,7 +210,7 @@
             <br/>
             Currently,
             <ul class ="readingText">
-              <li>Reading <a class = "link" href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a> by Don Norman</li>
+              <li>Reading <a class = "link readingText" href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a> by Don Norman</li>
               <li>Tending to the garden on my window sill</li>
               <li>Trying to automate the production of my morning panini</li>
             </ul>
