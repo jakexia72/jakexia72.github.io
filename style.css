@@ -352,6 +352,8 @@ li{
 .project-img{
   height: 40vw;
   width: 50vw;
+  background-position: center;
+  background-size: cover;
 }
 
 .project-description{

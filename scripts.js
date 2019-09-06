@@ -185,11 +185,17 @@ $(document).on('scroll', function() {
 	checkWhereToLook();
 });
 
-var projects = $('.project');
+
 var projectCounters = $('.project-counter');
 console.log(projects.length);
 for(let i = 0; i < projectCounters.length; i++){
 	projectCounters[i].innerHTML = (i+1) + "/" + projectCounters.length;
+}
+
+var explorationCounters = $('.numeral');
+console.log(explorationCounters.length);
+for(let i = 0; i < explorationCounters.length; i++){
+	explorationCounters[i].innerHTML = "0"+(i+1);
 }
 
 var d = new Date();
