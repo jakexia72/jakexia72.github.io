@@ -11,9 +11,6 @@ a{
 a:visited{
   color: inherit;
 }
-.scene-container{
-  position: absolute;
-}
 .spacer{
   height: 24px;
 }
@@ -570,6 +567,9 @@ li{
   }
   .contact-container a::after{
     height: 40px;
+  }
+  .landing-text{
+    font-size: 0.75em;
   }
   .mobileOnly{
     display: block;
