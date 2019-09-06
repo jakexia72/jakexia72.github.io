@@ -1,265 +1,255 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" dir="ltr">
 <head>
-    <title>Jake Xia</title>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82538207-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-82538207-3');
-  </script>
-
-
-
-  <meta charset="utf-8" />
-
-  <link rel="shortcut icon" href="icon.ico" type='image/x-icon' />
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-
-  <link rel="stylesheet" type="text/css" href="main.css">
-
-  <link rel="stylesheet" href="animate.css">
-
-  <link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat:500,700,700i" rel="stylesheet">
-
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,700&display=swap" rel="stylesheet">
 
-  <script type="text/javascript" src="main.js"></script>
-  <script src="blotter/blotter.min.js"></script>
-  <script src="blotter/channelSplitMaterial.js"></script>
-  <script src="blotter/liquidDistortMaterial.js"></script>
+  <!-- <script src="three.min.js" type = "text/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
+  <script src="scripts.js" type="text/javascript"></script>
 
+  <link rel="stylesheet" href="style.css">
+  <title>🥑 Jake Xia</title>
 </head>
-
 <body>
+  <!-- nav menu -->
+  <div id = "mainMenu" class = "mainColorBackground">
+    <div class = "mainMenu-container">
+      <div class = "mainMenu-menu">
+        <ul class = "menu-options">
+          <li><a class = "menuOption darkText" href="#projects">Projects</a></li>
+          <li><a class = "menuOption darkText" href="#explorations">Explorations</a></li>
+          <li><a class = "menuOption darkText" href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class = "mainMenu-links">
+        <ul class = "links-options">
+          <li><a href="mailto:jakexia72@hotmail.com" class = "darkText addAnimatedUnderline">Email</a></li>
+          <li><a href = "https://github.com/jakexia72"class = "darkText addAnimatedUnderline">Github</a></li>
+          <li><a href = "Jake's CV.pdf"class = "darkText addAnimatedUnderline">Résumé</a></li>
+          <li><a href = "https://www.linkedin.com/in/jakexia" class = "darkText addAnimatedUnderline">LinkedIn</a></li>
+          <li><a href = "https://www.instagram.com/jake.xia.jpeg" class = "darkText addAnimatedUnderline">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id = "hamburgerClose" class = "menuButton">
+    <div class = "xline xline-t darkBackground"></div>
+    <div class = "xline xline-b darkBackground"></div>
+  </div>
+  <div id = "hamburgerOpen" class = "menuButton">
+    <div class = "mline whiteBackground"></div>
+    <div class = "mline whiteBackground"></div>
+    <div class = "mline whiteBackground"></div>
+  </div>
 
-    <section id="home">
-        <div class="jumbotron" id="jumbotronFull">
-            <div class="container">
-                <img class = "animated fadeInUp" id="textLogo" src="Img/textLogo.png">
-            </div>
+
+  <!-- side bar -->
+  <div class = "utility-sidebar">
+    <div id = "vSectionIndicator" class = "vertical-section-indicator whiteText">
+      welcome
+    </div>
+  </div>
+
+  <!-- landing page -->
+  <div data-id="welcome" class = "switch"></div>
+  <div class = "landing">
+    <div id="scene-container" class = "bg">
+
+    </div>
+    <div class = "fg">
+      <div  class = "landing-text">
+        <h1>Hello, I'm <br class = "mobileOnly"><span class = "mainColorText emphasis">Jake Xia.</span> </h1>
+        <h1>Welcome to my <br class = "mobileOnly">portfolio.</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id ="changeNavColor"></div>
+
+  <!-- contents -->
+  <div class = "contents">
+  <div data-id="projects" id="projects" class = "switch"></div>
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">PROJECTS</div>
+    </div>
+    <div class = "project-list">
+      <div class = "project">
+        <div class = "project-img" style="background-image:url(img/projects/queueue.jpg)"></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>Queueue (web app)</h2>
+          <div class = "tags">
+            <div class = "tag lightText">firebase</div>
+            <div class = "tag lightText">node.js</div>
+            <div class = "tag lightText">jQuery</div>
+            <div class = "tag lightText">bootstrap</div>
+          </div>
+          <p class = "readingText">
+            (Pronounced 'queue - you') - Waiting rooms suck, so Queueue takes the 'room' out of the equation, allowing patients to wait from anywhere and get real-time updates about their virtual journey in the line.
+          </p>
+          <div class = "spacer"></div>
+          <a href="https://github.com/jakexia72/patientQueueHelper" class = "linkWithArrow darkText">github</a>
         </div>
-    </section>
-
-    <section style="background-color:#2A2A2A" id="about" class = "full">
-        <div class="space"></div>
-        <section class="withDoubleMargins" >
-            <div class="space"></div>
-            <div id="row2" class="row" style="margin-bottom:100px;">
-                <div class="col-sm-6">
-                    <div class="sideDiv mobileMargins">
-                        <h2 class="yellow">Creator/<br>
-                            Designer/<br>
-                            <i>Aspiring</i> Engineer</h2>
-                            <p class="addSpacer white smaller">Hello! I am currently a student at University Of Waterloo studying Mechatronics Engineering (hence the 'aspiring' part). I've worked as a self-taught graphic and web designer for projects all over the world. Some of my hobbies include robotics, math, photography, and illustration. Have a look!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div id="fullsizeDiv2" class="squareDiv coverBackground hiddenOnMobile" style="background-image:url(Img/6.jpg)">
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!--<img class="fullsizeImg" src="Img/slice3.jpg">-->
-
-
-
-        <!-- intro -->
-        <section class="withDoubleMargins" id="about">
-            <!-- row 1 -->
-
-            <div class="space"></div>
-            <div class="space"></div>
-            <div class="space"></div>
-            <div id = "projects" class="space"></div>
-
-            <img class = "fullsizeImg addPaddingMobile" src="Img/projects.png">
-            <!-- <script>
-              var text = new Blotter.Text("PROJECTS", {
-                family : "sans-serif",
-                size : 150,
-                fill : "black"
-            });
-              var material = new Blotter.ChannelSplitMaterial();
-              var blotter = new Blotter(material, { texts : text });
-              var scope = blotter.forText(text);
-              scope.appendTo($("#projects"));
-
-          </script> -->
-
-          <div class="space"></div>
-          <div class="space"></div>
-          <div class="space"></div>
-
-
-          <div id="row1" class="row" style="margin-bottom:100px">
-            <div class="col-sm-6">
-                <div id="" class="squareDiv" style="background-image:url(Img/5.jpg); background-size:cover">
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="sideDiv mobileMargins">
-                    <h2 class="dark">Trudeau Robotics</h2>
-                    <div class="smallerSpace"></div>
-                    <p class="">Formally known as Trubotics, our highschool robotics team was one of my favourite clubs. As an exec, I was head of publicity and design. I used catchy graphics and illustrations to instill a sense of innovation, attracting new memebers and creating a cohesive brand identity. Of course, I did actually work on the robots too - both as builder and a programmer. </p>
-                    <div class="space"></div>
-                    <a class="button" href="https://trubotics.github.io" style="">view website</a>
-                </div>
-            </div>
+      </div>
+      <div class = "project">
+        <div class = "project-img" style="background-image:url(img/projects/trubotics.jpg)"></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>Competitive Robotics Team</h2>
+          <p class = "lightText">VEX Robotics Team, top 15% in province</p>
+          <p class = "readingText">
+            Smart robots that aren’t smart enough to take over the world yet. Featuring autonomous abilities and human-centric design to ease the driving experience.
+          </p>
+          <div class = "spacer"></div>
+          <a href="https://trubotics.github.io" class = "linkWithArrow darkText">visit</a>
         </div>
-        
-        <div class = "space"></div>
-        
-        <div id="row6" class="row" style="margin-bottom:100px">
-            <div class="col-sm-6">
-                <div id="" class="squareDiv" style="background-image:url(Img/31.jpg); background-size:cover">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="sideDiv mobileMargins">
-                    <h2 class="dark">World Hepatitis Day 2017</h2>
-                    <div class="smallerSpace"></div>
-                    <p class="">In 2017, I interned at the Asian Liver Centre at Stanford for a summer. In Asia, Hep B and liver cancer is rampant due to lack of vaccination and stigma. World Hepatitis Day is a public health campaign created to educate and fight stigma, especially in the eastern parts of the world.  To aid this movement, I created many publications and PSAs in collaboration with the CDC to show to the chinese public in Beijing.   </p>
-                    <div class="space"></div>
-                    <a class="button" href="http://med.stanford.edu/liver.html" style="">view website</a>
-                </div>
-            </div>
+      </div>
+      <div class = "project">
+        <div class = "project-img" style="background-image:url(img/projects/moneymanager.jpg)"></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>MoneyManager (web app)</h2>
+          <div class = "tags">
+            <div class = "tag lightText">firebase</div>
+            <div class = "tag lightText">node.js</div>
+            <div class = "tag lightText">jQuery</div>
+            <div class = "tag lightText">bootstrap</div>
+          </div>
+          <p class = "readingText">
+            Make sense of your money with detailed breakdowns of your spending habits. Track how much you are spending, categories to spend less on, and most importantly, know when you can afford to treat yourself! Soon to be available on all devices.
+          </p>
+          <div class = "spacer"></div>
+           <p class = "lightText">(live-site coming ASAP)</p>
+          <a href="https://github.com/jakexia72/moneyManagerApp" class = "linkWithArrow darkText">github</a>
         </div>
-        
-        <div class = "space"></div>
-        
-        <div id="row6" class="row" style="margin-bottom:100px">
-            <div class="col-sm-6">
-                <div id="" class="squareDiv" style="background-image:url(Img/131.jpg); background-size:cover">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="sideDiv mobileMargins">
-                    <h2 class="dark">CTW Markham Website</h2>
-                    <div class="smallerSpace"></div>
-                    <p class="">This was one of my earlier web design projects and it helped me learn how to effectively brand and entice youth. I built this website entirely from scratch to be used as a platform to get more youth involved in volunteerism. It was my first time being exposed to front-end web development.</p>
-                    <div class="space"></div>
-                    <a class="button" href="https://ctwmarkham.github.io" style="">view website</a>
-                </div>
-            </div>
+      </div>
+      <div class = "project">
+        <div class = "project-img" style="background-image:url(img/projects/water.jpg)"></div>
+        <div class = "project-description addBlur">
+          <h4 class = "project-counter lightText">1/5</h4>
+          <h2>Modular Water Bottle</h2>
+          <div class = "tags">
+            <div class = "tag lightText">Shapr3D</div>
+            <div class = "tag lightText">SolidWorks</div>
+            <div class = "tag lightText">AutoCad</div>
+          </div>
+          <p class = "readingText">
+            Modular water bottle designed for tea-steeping, fruit-infusing, carbon-filtering, easy-cleaning, plastic-reducing, and planet-saving.  Includes a handy ice-core so your drinks aren’t watered down by faster-melting ice caused by climate change.
+          </p>
+          <div class = "spacer"></div>
+          <p href="#" class = "darkText">more details in the works</p>
         </div>
-        
-    </section>
+      </div>
+    </div>
+  </div>
 
-    
-    <div class="space"></div>
-    
-    <section class="withDoubleMargins" id="contact">
+  <div data-id="explorations" id="explorations" class = "switch"></div>
 
-        <div class="mobileMargins">
-            <div class="space"></div>
-            <div class="gradient rectangle"></div>
-            <h2 class="dark">Get in touch </h2>
-            <div class="space"></div>
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">
+        EXPLORATIONS
+      </div>
+    </div>
+    <div class = "exploration-list">
+      <div class = "exploration exploration-spacer lightText" style="text-align:right; margin-top:32vh; font-size:2em">
+         <br /> ←
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/ARKit.gif)"></div>
+        <a href="https://github.com/jakexia72/learningiOS/tree/master/AR%20Face%20Tracking" class = "linkWithArrow darkText">iOS AR Face Tracking</a>
+        <p class = "lightText">Built with ARKit and FaceID sensor on iPad Pro</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/photography.jpg)"></div>
+        <a href="https://www.instagram.com/jake.xia.jpeg/" class = "linkWithArrow darkText">Photography</a>
+        <p class = "lightText">Some moody photos</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/cuplid.jpg)"></div>
+        <a class = "darkText">Flexicap Reuseable Lid</a>
+        <p class = "lightText">Turn any ordinary cup a reusable to-go cup (prototype)</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/planter.jpg)"></div>
+        <a class = "darkText">Moisture Controlling Planter</a>
+        <p class = "lightText">3D printed planters that prevent overwatering</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/set.jpg)"></div>
+        <a href="https://github.com/jakexia72/learningiOS/tree/master/Learning%20Swift/Set!%203" class = "linkWithArrow darkText">SET! iOS Game</a>
+        <p class = "lightText">Classic game digitized to practice swift</p>
+      </div>
+      <div class = "exploration">
+        <div class = "numeral lightText">01</div>
+        <div class = "exploration-img" style="background-image:url(img/explorations/printer.jpg)"></div>
+        <a class = "darkText">LEGO Plotter</a>
+        <p class = "lightText">Lego Mindstorm, bitmaps, dithering</p>
+      </div>
+      <div class = "exploration-spacer">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+
+  <div data-id="about" id = "about" class = "switch"></div>
+
+  <div class = "section-withStickyIndicator">
+    <div class = "stickySectionIndicator-container">
+      <div class = "stickySectionIndicator-heading">ABOUT</div>
+    </div>
+    <div class = "row">
+      <div class = "col col-30">
+        <div id = "dp" class = "profile-image" style = ""></div>
+      </div>
+      <div class = "col col-50 addBlur">
+        <div class ="about-text">
+          <h1><i>*Aspiring*</i> Engineer</h1>
+          <p class = "readingText">
+            Good <span id="timeOfDay">time of day</span>! I’m currently a 2nd year mechatronics engineering student at the University of Waterloo. I am deeply interested in the intersection of software, hardware, design and how these disciplines can be used sustainably to prevent the end of the world.
+            <br/>
+            <br/>
+            Currently,
+            <ul class ="readingText">
+              <li>Reading <a class = "link readingText" href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things">The Design of Everyday Things</a> by Don Norman</li>
+              <li>Tending to the garden on my window sill</li>
+              <li>Trying to automate the production of my morning panini</li>
+            </ul>
+          </p>
         </div>
+      </div>
+    </div>
+  </div>
 
-        
-        <div class="row" id="row4">
-            <div class="col-sm-6">
-                <div id="fullsizeDiv4" >
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92638.88562926684!2d-80.61675919556181!3d43.48219712542884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf1565ffe672b%3A0x5037b28c7231d90!2sWaterloo%2C+ON!5e0!3m2!1sen!2sca!4v1536456101526" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-            
-            <div class="col-sm-6">
-                <div class="sideDiv mobileMargins">
-                    <h3 class="dark">Beam me an email</h3>
-                    <input id="mySubject" placeholder="subject">
-                    <div style="height:5px;"></div>
-                    <textarea style = "margin-bottom: 20px" id="myText" placeholder="message"></textarea>
-
-                    <a class="button" onclick="sendMail(); return false">send</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="space"></div>
-        
-        <div class="mobileMargins">
-            <div class="space"></div>
-            <h3 class="dark center">Resume: <a class="contactLink" href="https://drive.google.com/file/d/1gjBneVDSR-4GBdvAQ_eTE-RIftUrkp0D/view?usp=sharing">View Here</a></h3>
-            <div class="space"></div>
-        </div>
-        
-        <div class="mobileMargins">
-            <div class="space"></div>
-            <h3 class="dark center">LinkedIn: <a class="contactLink" href="https://www.linkedin.com/in/jakexia">jakexia</a></h3>
-            <div class="space"></div>
-        </div>
-        
-        <div class="mobileMargins">
-            <div class="space"></div>
-            <h3 class="dark center">Github: <a class="contactLink" href="https://github.com/jakexia72">jakexia72</a></h3>
-            <div class="space"></div>
-        </div>
-        
-        <div class="mobileMargins">
-            <div class="space"></div>
-            <h3 class="dark center">Instagram</h3>
-            <div class="space"></div>
-        </div>
-        
-        <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'rTfFJFqZgBttoMHVdGr'});Pixlee.addSimpleWidget({widgetId:'8761'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
-        
-        <div class="space"></div>
-        
-        <hr>
-        <p class = "center"> &copy; copyright 2019 Jake Xia </p>
-        
-
-    </section>
-
-    <!-- social media banner<div class="gradient smallBanner">
-        <div class="bannerIcon">
-            <a href = "https://www.facebook.com/CTWMarkham/?fref=ts"><img class="smallImg" src="Img/socialIcons/facebook.svg"></a>
-            <a href="https://www.instagram.com/ctwmarkham/"><img class="smallImg" src="Img/socialIcons/instagram.svg"></a>
-            <a href = "https://twitter.com/ctw_markham"><img class="smallImg" src="Img/socialIcons/twitter.svg"></a>
-        </div>
-    </div>-->
-    
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-</body>
-
-<footer>
-
-</footer>
-
-
-<ul class="topnav" id="mytopnav">
-    <!--<li><img class="whiteLogo" src="Img/whitelogo.svg"></li>-->
-    <li><a href="#home">WELCOME</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#projects">PROJECTS</a></li>
-    <li><a href="#contact">CONTACT</a></li>
-</ul>
-
-
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#home">WELCOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#contact">CONTACT</a>
+  <div data-id="contact" class = "switch"></div>
+  <div class = "section-withStickyIndicator">
+    <div class = "contact-container">
+      <ul class = "">
+        <li><a href="mailto:jakexia72@hotmail.com" class = "darkText ">Email</a></li>
+        <li><a href = "https://github.com/jakexia72"class = "darkText ">Github</a></li>
+        <li><a href = "Jake's CV.pdf"class = "darkText">Résumé</a></li>
+        <li><a href = "https://www.linkedin.com/in/jakexia" class = "darkText ">LinkedIn</a></li>
+        <li><a href = "https://www.instagram.com/jake.xia.jpeg" class = "darkText ">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
+<footer>
+    <p class = "lightText" style="text-align: center;"> &copy; <span id="year">date</span> Jake Xia</p>
+</footer>
+<script src="3D.js" type="text/javascript"></script>
 
-
-<span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</body>
+</html>
