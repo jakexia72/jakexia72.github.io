@@ -11,6 +11,9 @@ a{
 a:visited{
   color: inherit;
 }
+.scene-container{
+  position: absolute;
+}
 .spacer{
   height: 24px;
 }
@@ -585,9 +588,11 @@ li{
   .col-30{
     flex-basis: 55vw;
   }
-
   .about-text{
     margin-left: 32px;
     margin-right: 32px;
+  }
+  .contact-container ul{
+    font-size: 2em;
   }
 }
