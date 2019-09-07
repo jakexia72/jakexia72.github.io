@@ -101,6 +101,16 @@ function closeMenu(){
   menumenuIsOpen = false;
 }
 
+function changeNightModeToggleColor(){
+	if($('#night-mode-toggle').offset().top >= $('#changeNavColor').position().top - 10){
+		$('#night-mode-toggle').removeClass('whiteText');
+		$('#night-mode-toggle').addClass('darkText');
+	} else {
+		$('#night-mode-toggle').addClass('whiteText');
+		$('#night-mode-toggle').removeClass('darkText');
+	}
+}
+
 function changeVIndicatorColor(){
 	if($('#vSectionIndicator').offset().top >= $('#changeNavColor').position().top - 40){
 		$('#vSectionIndicator').removeClass('whiteText');
@@ -121,15 +131,6 @@ function changeHamburgerColor(){
 	}
 }
 
-// $(document).mouseup(function(e){
-//     let container = $("#mainMenu");
-//     // if the target of the click isn't the container nor a descendant of the container
-//     if (!container.is(e.target) && container.has(e.target).length === 0){
-//     	menuIsOpening = false;
-//     	hideXLines();
-//     	closeMenu();
-//     }
-// });
 
 
 function findSection(){
@@ -183,6 +184,7 @@ $(document).on('scroll', function() {
 	changeHamburgerColor();
 	changeVIndicatorColor();
 	checkWhereToLook();
+	changeNightModeToggleColor();
 });
 
 
@@ -209,6 +211,52 @@ function timeOfDay(){
     return "Evening";
   }
 }
+
+
+var nightMode = false;
+function toggleNightMode(){
+	if(!nightMode){
+		// $('body').css('background-color','#161616');
+		$('#night-mode-toggle').text('☀︎')
+		changeCss('body','background-color: #161616;');
+		changeCss('.darkText', 'color: white;');
+		changeCss('.darkBackground', 'background-color: white;');
+		changeCss('.readingText', 'color: #CBCBCB;');
+		$('.addBlur').addClass('darkBlur');
+		changeCss('.landing', 'border-color: #161616;');
+		changeCss('.mainColorBackground', 'background-color: black;');
+		nightMode = true;
+	} else if (nightMode){
+		$('#night-mode-toggle').text('☾')
+		$('#css-modifier-container').remove();
+		$('.addBlur').removeClass('darkBlur');
+		nightMode = false;
+
+	}
+}
+
+function changeCss(className, classValue) {
+    // we need invisible container to store additional css definitions
+    var cssMainContainer = $('#css-modifier-container');
+    if (cssMainContainer.length == 0) {
+        var cssMainContainer = $('<div id="css-modifier-container"></div>');
+        cssMainContainer.hide();
+        cssMainContainer.appendTo($('body'));
+    }
+    // and we need one div for each class
+    classContainer = cssMainContainer.find('div[data-class="' + className + '"]');
+    if (classContainer.length == 0) {
+        classContainer = $('<div data-class="' + className + '"></div>');
+        classContainer.appendTo(cssMainContainer);
+    }
+    // append additional style
+    classContainer.html('<style>' + className + ' {' + classValue + '}</style>');
+}
+
+
+	$('#night-mode-toggle').click(function(){
+		toggleNightMode();
+	});
 
 	$("#timeOfDay").html(timeOfDay());
 	//set the copyright to the current year
