@@ -211,6 +211,12 @@ function timeOfDay(){
     return "Evening";
   }
 }
+console.log(d.getHours());
+
+if(d.getHours() >= 20 || d.getHours() <= 4){
+	console.log(d.getHours());
+	toggleNightMode();
+}
 
 
 var nightMode = false;
@@ -257,6 +263,8 @@ function changeCss(className, classValue) {
 	$('#night-mode-toggle').click(function(){
 		toggleNightMode();
 	});
+
+
 
 	$("#timeOfDay").html(timeOfDay());
 	//set the copyright to the current year
