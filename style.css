@@ -401,6 +401,7 @@ li{
   display: flex;
   flex-direction: row;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   margin-right: -16px;
   margin-left: -64px;
 }
