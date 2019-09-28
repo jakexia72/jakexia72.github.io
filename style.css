@@ -86,6 +86,12 @@ li{
   background-position: bottom;
   background-image: url(img/lookDOWN.jpg);
 }
+.whiteSVGFill{
+  fill: white;
+}
+.darkSVGFill{
+  fill: #0e0e0e;
+}
 .whiteText{
   color: white;
 }

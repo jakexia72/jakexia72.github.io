@@ -102,12 +102,12 @@ function closeMenu(){
 }
 
 function changeNightModeToggleColor(){
-	if($('#night-mode-toggle').offset().top >= $('#changeNavColor').position().top - 10){
-		$('#night-mode-toggle').removeClass('whiteText');
-		$('#night-mode-toggle').addClass('darkText');
+	if($('#night-mode-icon').offset().top >= $('#changeNavColor').position().top - 10){
+		$('#night-mode-icon').removeClass('whiteSVGFill');
+		$('#night-mode-icon').addClass('darkSVGFill');
 	} else {
-		$('#night-mode-toggle').addClass('whiteText');
-		$('#night-mode-toggle').removeClass('darkText');
+		$('#night-mode-icon').addClass('whiteSVGFill');
+		$('#night-mode-icon').removeClass('darkSVGFill');
 	}
 }
 
@@ -213,17 +213,25 @@ function timeOfDay(){
 }
 console.log(d.getHours());
 
+var sunIcon = '<path d="M8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-1c1.657 0 3-1.343 3-3S9.657 5 8 5 5 6.343 5 8s1.343 3 3 3zM7.5 0h1v3h-1zM7.5 13h1v3h-1zM13.303 1.99l.707.707-2.12 2.12-.708-.706zM4.11 11.182l.708.707-2.12 2.12-.708-.707zM16 7.5v1h-3v-1zM3 7.5v1H0v-1zM14.01 13.303l-.706.707-2.122-2.12.707-.708zM4.818 4.11l-.707.708-2.12-2.12.706-.708z"/>';
+var moonIcon = '<path d="M6.103.226C5.405 1.316 5 2.61 5 4c0 3.866 3.134 7 7 7 1.39 0 2.685-.405 3.774-1.103C14.922 13.4 11.764 16 8 16c-4.418 0-8-3.582-8-8C0 4.235 2.6 1.078 6.103.226zM4.226 2.103C2.286 3.348 1 5.523 1 8c0 3.866 3.134 7 7 7 2.476 0 4.652-1.286 5.897-3.226-.608.148-1.244.226-1.897.226-4.418 0-8-3.582-8-8 0-.653.078-1.29.226-1.897z"/>'
+
+var nightMode = false;
 if(d.getHours() >= 20 || d.getHours() <= 4){
 	console.log(d.getHours());
 	toggleNightMode();
+	$('#night-mode-icon').html(sunIcon);
+
 }
 
 
-var nightMode = false;
+
 function toggleNightMode(){
 	if(!nightMode){
 		// $('body').css('background-color','#161616');
-		$('#night-mode-toggle').text('☀︎')
+		console.log('TURNING DARK');
+		$('#night-mode-icon').html(sunIcon);
+		console.log($('#night-mode-icon').html());
 		changeCss('body','background-color: #161616;');
 		changeCss('.darkText', 'color: white;');
 		changeCss('.darkBackground', 'background-color: white;');
@@ -231,15 +239,17 @@ function toggleNightMode(){
 		$('.addBlur').addClass('darkBlur');
 		changeCss('.landing', 'border-color: #161616;');
 		changeCss('.mainColorBackground', 'background-color: black;');
+		changeCss('.darkSVGFill', 'fill:white;')
 		nightMode = true;
 	} else if (nightMode){
-		$('#night-mode-toggle').text('☾')
+		$('#night-mode-icon').html(moonIcon);
 		$('#css-modifier-container').remove();
 		$('.addBlur').removeClass('darkBlur');
 		nightMode = false;
 
 	}
 }
+
 
 function changeCss(className, classValue) {
     // we need invisible container to store additional css definitions
@@ -261,6 +271,7 @@ function changeCss(className, classValue) {
 
 
 	$('#night-mode-toggle').click(function(){
+		console.log('NIGHTMODE');
 		toggleNightMode();
 	});
 
