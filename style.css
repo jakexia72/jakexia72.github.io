@@ -5,13 +5,23 @@ body{
   margin: 0;
   font-family: 'Chivo', sans-serif;
   -webkit-transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
+}
+::selection{
+  color:#FFD600;
+  /* text-shadow: 0.03em 0.03em 0 #FFD600, 0.03em -0.03em 0 #FFD600, -0.03em 0.03em 0 #FFD600; */
 }
 a{
   text-decoration: none;
 }
 a:visited{
   /* color: inherit; */
+}
+.unselectable{
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 .spacer{
   height: 24px;
@@ -343,7 +353,6 @@ li{
   font-size: 3em;
   letter-spacing: 0.3em;
 }
-
 .project-list{
   display: flex;
   flex-direction: column;

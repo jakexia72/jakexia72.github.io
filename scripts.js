@@ -217,12 +217,18 @@ var sunIcon = '<path d="M8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 
 var moonIcon = '<path d="M6.103.226C5.405 1.316 5 2.61 5 4c0 3.866 3.134 7 7 7 1.39 0 2.685-.405 3.774-1.103C14.922 13.4 11.764 16 8 16c-4.418 0-8-3.582-8-8C0 4.235 2.6 1.078 6.103.226zM4.226 2.103C2.286 3.348 1 5.523 1 8c0 3.866 3.134 7 7 7 2.476 0 4.652-1.286 5.897-3.226-.608.148-1.244.226-1.897.226-4.418 0-8-3.582-8-8 0-.653.078-1.29.226-1.897z"/>'
 
 var nightMode = false;
-if(d.getHours() >= 20 || d.getHours() <= 4){
+
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (isDarkMode || d.getHours() >= 20 || d.getHours() <= 4){
 	console.log(d.getHours());
 	toggleNightMode();
 	$('#night-mode-icon').html(sunIcon);
-
 }
+
+// if(d.getHours() >= 20 || d.getHours() <= 4){
+//
+//
+// }
 
 
 
