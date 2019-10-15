@@ -219,10 +219,12 @@ var moonIcon = '<path d="M6.103.226C5.405 1.316 5 2.61 5 4c0 3.866 3.134 7 7 7 1
 var nightMode = false;
 
 const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-if (isDarkMode || d.getHours() >= 20 || d.getHours() <= 4){
+if (isDarkMode || (d.getHours() >= 20 || d.getHours() <= 4)){
 	console.log(d.getHours());
 	toggleNightMode();
 	$('#night-mode-icon').html(sunIcon);
+} else {
+	$('#night-mode-icon').html(moonIcon);
 }
 
 // if(d.getHours() >= 20 || d.getHours() <= 4){
