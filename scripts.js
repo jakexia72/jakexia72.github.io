@@ -268,7 +268,7 @@ function toggleNightMode(){
 		changeCss('.darkBackground', 'background-color: white;');
 		changeCss('.readingText', 'color: #CBCBCB;');
 		$('.addBlur').addClass('darkBlur');
-		changeCss('.landing', 'border-color: #161616;');
+		changeCss('#landing', 'border-color: #161616;');
 		changeCss('.mainColorBackground', 'background-color: black;');
 		changeCss('.darkSVGFill', 'fill:white;')
 		nightMode = true;
