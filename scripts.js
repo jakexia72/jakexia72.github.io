@@ -17,6 +17,14 @@ $(document).ready(function () {
 		});
 	});
 
+	function animateEntry(){
+		addAnimationDelays($(".animateEntry"), 100);
+		$('.animateEntry').css("top","0");
+		$('.animateEntry').css("opacity","1");
+	}
+
+animateEntry();
+
 var menuLines = $(".mline");
 var closeLines = $(".xline");
 
