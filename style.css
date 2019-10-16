@@ -523,7 +523,7 @@ li{
   }
 }
 @media only screen and (max-width: 1024px){
-  .landing{
+  #landing{
     border: 8px solid white;
   }
   .utility-sidebar{
