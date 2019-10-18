@@ -297,6 +297,14 @@ li{
     margin-left: 80px;
 }
 
+#scene-container{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+}
+
 #landing{
   width: 100%;
   height: 100%;
@@ -306,7 +314,6 @@ li{
   background-size: cover;
   border: 16px solid white;
   -webkit-transition: 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
 }
 
 .bg{
@@ -525,6 +532,13 @@ li{
 @media only screen and (max-width: 1024px){
   #landing{
     border: 8px solid white;
+  }
+  #scene-container{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
   }
   .utility-sidebar{
     top: 16px;
