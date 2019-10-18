@@ -1,7 +1,6 @@
 var scene = new THREE.Scene();
-var container = $('#scene-container');
-//var frameSize = roundBorderValue(parseInt($('#landing').css("border-left-width")));
-//console.log("FRAME" + frameSize);
+let container = $('#scene-container');
+
 var camera = new THREE.PerspectiveCamera(
   60,
   $(container).innerWidth() / $(container).innerHeight(),
@@ -12,7 +11,7 @@ var camera = new THREE.PerspectiveCamera(
 camera.position.set(0, -32, 200);
 camera.lookAt(scene.position);
 var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
-renderer.setSize($(container).innerWidth() , $(container).innerHeight());
+renderer.setSize($(container).innerWidth(), $(container).innerHeight());
 $(container).append( renderer.domElement );
 
 var division = 40;
@@ -88,17 +87,10 @@ function render() {
 window.addEventListener( 'resize', onWindowResize, false );
 
 function onWindowResize(){
-    //frameSize = roundBorderValue(parseInt($('#landing').css("border-left-width")));
-    camera.aspect = $(container).innerWidth() / $(container).innerHeight();
-    camera.updateProjectionMatrix();
-    renderer.setSize( $(container).innerWidth(), $(container).innerHeight());
-    //console.log(frameSize);
-}
 
-function roundBorderValue(val){
-  if(val < 10){
-    return 8;
-  } else {
-    return 16;
-  }
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
 }
