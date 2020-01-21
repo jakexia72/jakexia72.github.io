@@ -227,11 +227,11 @@ var d = new Date();
 function timeOfDay(){
 	time = d.getHours();
   if(time < 12){
-    return "Morning";
+    return "morning";
   } else if (time < 17){
-    return "Afternoon";
+    return "afternoon";
   } else if (time < 24){
-    return "Evening";
+    return "evening";
   }
 }
 console.log(d.getHours());
