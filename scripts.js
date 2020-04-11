@@ -195,9 +195,9 @@ function checkSectionChange(){
 function checkWhereToLook(){
 	if($(this).scrollTop() >= $("#dp").offset().top - ($( window ).height()*0.60) && $(this).scrollTop() <= $("#dp").offset().top - ($( window ).height()*0.10)){
 		// console.log($(this).scrollTop() + " : " + $("#dp").offset().top);
-		$("#dp").css('background-image','url(img/lookUP.jpg)')
-	} else if($('#dp').css('background-image') != 'url(img/lookDOWN.jpg)'){
-		$("#dp").css('background-image','url(img/lookDOWN.jpg)')
+		$("#dp-front").css('opacity',0);
+	} else if($('#dp-front').css('opacity') != '1'){
+		$("#dp-front").css('opacity',1)
 	}
 }
 

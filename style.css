@@ -88,14 +88,27 @@ li{
   flex-basis: 55vw;
   flex-grow: 1;
 }
-.profile-image{
+.profile-image-container{
   height: 320px;
   width: 240px;
   align-self: flex-end;
   margin-right: 16px;
+  position: relative;
+  /* background-image: url(img/lookDOWN.jpg); */
+}
+.profile-image{
+  height: 100%;
+  width: 100%;
   background-size: cover;
   background-position: bottom;
+  position: absolute;
+}
+#dp-front{
+  transition: 0.1s ease;
   background-image: url(img/lookDOWN.jpg);
+}
+#dp-back{
+  background-image: url(img/lookUP.jpg);
 }
 .whiteSVGFill{
   fill: white;
@@ -597,7 +610,7 @@ li{
     width: calc(100% - 32px);
     padding: 16px;
   }
-  .profile-image{
+  .profile-image-container{
     margin-right: 0px;
   }
   .about-text{
