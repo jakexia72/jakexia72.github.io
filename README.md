@@ -1,4 +1,4 @@
-# 👋 Welcome to my portfolio, [Jakexia.com](jakexia.com)
+# 👋 Welcome to my portfolio, [Jakexia.com](https://jakexia.com)
 ![devices](https://jakexia.com/img/other/websiteOnDevices.png)
 
 ### About This Project
