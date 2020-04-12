@@ -94,8 +94,15 @@ li{
   align-self: flex-end;
   margin-right: 16px;
   position: relative;
+  transition: 0.3s ease;
   /* background-image: url(img/lookDOWN.jpg); */
 }
+
+.profile-image-container:hover{
+  height: 328px;
+  width: 246px;
+}
+
 .profile-image{
   height: 100%;
   width: 100%;
@@ -407,6 +414,12 @@ li{
   width: 50vw;
   background-position: center;
   background-size: cover;
+  transition: 0.3s ease;
+}
+
+.project-img:hover{
+  height: 40.5vw;
+  width: 51vw;
 }
 
 .project-description{
@@ -463,6 +476,12 @@ li{
   margin-bottom: 8px;
   background-size: cover;
   background-position: center;
+  transition: 0.3s ease;
+}
+
+.exploration-img:hover{
+  height: 67.2vh;
+  width: 50.4vh;
 }
 
 .about-text{
