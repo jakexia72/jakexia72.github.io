@@ -98,11 +98,6 @@ li{
   /* background-image: url(img/lookDOWN.jpg); */
 }
 
-.profile-image-container:hover{
-  height: 328px;
-  width: 246px;
-}
-
 .profile-image{
   height: 100%;
   width: 100%;
@@ -417,11 +412,6 @@ li{
   transition: 0.3s ease;
 }
 
-.project-img:hover{
-  height: 40.5vw;
-  width: 51vw;
-}
-
 .project-description{
   position: relative;
   width: calc(50vw - 64px);
@@ -479,11 +469,6 @@ li{
   transition: 0.3s ease;
 }
 
-.exploration-img:hover{
-  height: 67.2vh;
-  width: 50.4vh;
-}
-
 .about-text{
   margin-left: 16px;
   max-width: 500px;
@@ -535,6 +520,14 @@ li{
   .no-justify-left{
     text-align: left;
   }
+  .profile-image-container:hover{
+    height: 328px;
+    width: 246px;
+  }
+  .project-img:hover{
+    height: 40.5vw;
+    width: 51vw;
+  }
 }
 
 /* For big desktops */
@@ -555,6 +548,10 @@ li{
     margin-top: 10vh;
     margin-left: 36px;
     margin-right: 16px;
+  }
+  .exploration-img:hover{
+    height: 67.2vh;
+    width: 50.4vh;
   }
 }
 @media only screen and (max-width: 1024px){
