@@ -532,6 +532,9 @@ li{
   p{
     text-align: justify;
   }
+  .no-justify-left{
+    text-align: left;
+  }
 }
 
 /* For big desktops */
