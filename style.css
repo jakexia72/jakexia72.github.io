@@ -88,6 +88,31 @@ li{
   flex-basis: 55vw;
   flex-grow: 1;
 }
+.horizontal-scroll-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6px;
+}
+.horizontal-scroll-indicator{
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 16px;
+  height: 4px;
+  transition: 0.2s ease;
+  opacity: 0.25;
+
+}
+.active{
+  opacity: 1;
+  width: 36px;
+  height: 6px;
+}
+.horizontal-scroll-indicator:hover{
+  opacity: 0.5;
+  width: 16px;
+  height: 36px;
+}
 .profile-image-container{
   height: 320px;
   width: 240px;
