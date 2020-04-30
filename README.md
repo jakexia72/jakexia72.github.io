@@ -21,5 +21,13 @@ This is an on-going project where I showcase some of the personal stuff that I'v
     
     The solution I came up with was a scroll bar, but I didn't like how plain existing scroll bars were so I set out to create my own.
 
-    ![scrollBar](https://jakexia.com/img/other/proccess-0.gif)
+    <b> Here it is in action </b>
+    ![scrollBar](https://jakexia.com/img/other/process-0.gif)
 
+    This design was insipred by audio spectrum visualizers (those bopping bars).
+    <b>Prototype</b>
+    ![process-2](https://jakexia.com/img/other/process-2.gif)
+    
+     <b> Process </b>
+    ![process-1](https://jakexia.com/img/other/process-1.jpg)
+    
