@@ -30,9 +30,10 @@ This is an on-going project where I showcase some of the personal stuff that I'v
     <b>Prototype</b>
 
     ![process-2](https://jakexia.com/img/other/process-2.gif)
+    
     I had to make this physical prototype to get the concept down (as well as the calculations).
 
      <b> Process </b>
-     
+
     ![process-1](https://jakexia.com/img/other/process-1.jpg)
     
