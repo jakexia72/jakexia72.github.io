@@ -12,3 +12,14 @@ This is an on-going project where I showcase some of the personal stuff that I'v
 - Dark mode
 
 ![darkmode](https://jakexia.com/img/other/darkLightShowcase.png)
+
+
+### Updates
+
+- #### 30/04/2020
+    I tried interacting with my website for the first time using a mouse and quickly found that the exporlation section was very difficult to navigate. On a trackpad, two finger side scroll and on touch-enabled devices, a simple swipe gesture was enough for horizontal scolling. However, this is not the case with a mouse. 
+    
+    The solution I came up with was a scroll bar, but I didn't like how plain existing scroll bars were so I set out to create my own.
+
+    
+
