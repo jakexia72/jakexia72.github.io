@@ -101,7 +101,6 @@ li{
   height: 4px;
   transition: 0.2s ease;
   opacity: 0.25;
-
 }
 .active{
   opacity: 1;
@@ -676,7 +675,12 @@ li{
   .mobileOnly{
     display: block;
   }
-
+  .horizontal-scroll-indicator{
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 12px;
+    height: 4px;
+  }
 }
 @media only screen and (max-width: 800px) and (orientation: landscape){
   .menu-options{
