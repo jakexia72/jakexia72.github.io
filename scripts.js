@@ -1,3 +1,18 @@
+function addAnimationDelays(array, ms) {
+	for (let i = 0; i < array.length; i++) {
+		$(array[i]).css("transition-delay", (ms * i) + 'ms');
+	}
+}
+function animateEntry() {
+	addAnimationDelays($(".animateEntry"), 100);
+	$('.animateEntry').css("top", "0");
+	$('.animateEntry').css("opacity", "1");
+}
+
+$(window).on('load', function () {
+	animateEntry();
+});
+
 
 $(document).ready(function () {
 	//AOS.init();
@@ -16,17 +31,6 @@ $(document).ready(function () {
 			}
 		});
 	});
-
-	function animateEntry() {
-		addAnimationDelays($(".animateEntry"), 100);
-		$('.animateEntry').css("top", "0");
-		$('.animateEntry').css("opacity", "1");
-	}
-
-	$(window).on('load', function () {
-		animateEntry();
-   });
-
 
 	var menuLines = $(".mline");
 	var closeLines = $(".xline");
@@ -93,12 +97,6 @@ $(document).ready(function () {
 	function removeClass(elements, clss) {
 		for (let i = 0; i < elements.length; i++) {
 			elements[i].classList.remove(clss);
-		}
-	}
-
-	function addAnimationDelays(array, ms) {
-		for (let i = 0; i < array.length; i++) {
-			$(array[i]).css("transition-delay", (ms * i) + 'ms');
 		}
 	}
 
