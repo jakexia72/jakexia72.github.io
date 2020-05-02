@@ -17,27 +17,15 @@ $(document).ready(function () {
 		});
 	});
 
-
-	function waitForEl(selector, callback) {
-		if (jQuery(selector).length) {
-			callback();
-		} else {
-			setTimeout(function () {
-				waitForEl(selector, callback);
-			}, 100);
-		}
-	};
-
 	function animateEntry() {
 		addAnimationDelays($(".animateEntry"), 100);
 		$('.animateEntry').css("top", "0");
 		$('.animateEntry').css("opacity", "1");
 	}
 
-	waitForEl($('#landing'), function () {
+	$(window).on('load', function () {
 		animateEntry();
-	});
-
+   });
 
 
 	var menuLines = $(".mline");
