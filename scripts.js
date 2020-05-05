@@ -206,13 +206,17 @@ $(document).ready(function () {
 	var explorationCounters = $('.numeral');
 	console.log(explorationCounters.length);
 	for (let i = 0; i < explorationCounters.length; i++) {
-		explorationCounters[i].innerHTML = "0" + (i + 1);
+		if (i < 9) {
+			explorationCounters[i].innerHTML = "0" + (i + 1);
+		} else {
+			explorationCounters[i].innerHTML = (i + 1);
+		}
 	}
 
 	var explorationSection = $('#exploration-section');
 	var sliderSpace = explorationSection[0].scrollWidth - window.innerWidth;
 
-	$( window ).resize(function() {
+	$(window).resize(function () {
 		sliderSpace = explorationSection[0].scrollWidth - window.innerWidth;
 	});
 
@@ -233,9 +237,9 @@ $(document).ready(function () {
 		}
 	}
 
-	function scrollToSpot(index){
-		const destination = sliderSpace * ((index+1) / numIndicators);
-		explorationSection.animate({ scrollLeft: destination}, 800);
+	function scrollToSpot(index) {
+		const destination = sliderSpace * ((index + 1) / numIndicators);
+		explorationSection.animate({ scrollLeft: destination }, 800);
 	}
 
 	const numIndicators = 20;
@@ -254,11 +258,11 @@ $(document).ready(function () {
 		updateHorizontalScrollBar();
 	});
 
-	$( ".horizontal-scroll-indicator" ).click(function() {
-		var index = $( ".horizontal-scroll-indicator" ).index( this );
+	$(".horizontal-scroll-indicator").click(function () {
+		var index = $(".horizontal-scroll-indicator").index(this);
 		console.log('index', index);
 		scrollToSpot(index);
-	  });
+	});
 
 	var d = new Date();
 	function timeOfDay() {
