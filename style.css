@@ -493,12 +493,15 @@ li{
   -webkit-overflow-scrolling: touch;
   margin-right: -16px;
   margin-left: -64px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 50%;
 }
 .exploration-list::-webkit-scrollbar {
   display: none;
 }
 
 .exploration{
+  scroll-snap-align: center;
   margin-left: 36px;
 }
 .exploration-spacer{
@@ -710,6 +713,13 @@ li{
     margin-right: 2px;
     width: 12px;
     height: 4px;
+  }
+  .exploration-list{
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0px 0px 0px 32px;
+  }
+  .exploration{
+    scroll-snap-align: center;
   }
 }
 @media only screen and (max-width: 800px) and (orientation: landscape){
