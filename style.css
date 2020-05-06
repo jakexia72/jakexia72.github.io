@@ -716,6 +716,7 @@ li{
   }
   .exploration-list{
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: normal;
     scroll-padding: 0px 0px 0px 32px;
   }
   .exploration{
