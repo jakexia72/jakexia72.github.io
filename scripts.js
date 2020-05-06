@@ -301,6 +301,7 @@ $(document).ready(function () {
 			changeCss('body', 'background-color: #161616;');
 			changeCss('.darkText', 'color: white;');
 			changeCss('.darkBackground', 'background-color: white;');
+			changeCss('.darkBorder', 'border-color: white;');
 			changeCss('.readingText', 'color: #CBCBCB;');
 			$('.addBlur').addClass('darkBlur');
 			changeCss('#landing', 'border-color: #161616;');

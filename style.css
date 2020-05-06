@@ -33,9 +33,9 @@ a:visited{
 .link:hover{
   color: #FFD600;
 }
-.linkWithArrow{
+/* .linkWithArrow{
 
-}
+} */
 .linkWithArrow::after{
   content: " →";
   -webkit-transition: .2s ease;
@@ -148,11 +148,17 @@ li{
 .whiteBackground{
   background-color: white;
 }
+.whiteBorder{
+  border-color: white;
+}
 .darkText{
   color: #0e0e0e;
 }
 .darkBackground{
   background-color: #0e0e0e;
+}
+.darkBorder{
+  border-color: #0e0e0e;
 }
 .readingText{
   color: #444C58;
@@ -168,6 +174,21 @@ li{
 }
 .mainColorBackground{
   background-color: #FFD600;
+}
+
+.z-stack{
+  position: relative;
+}
+.back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.font{
+  position: absolute;
 }
 
 .menuButton{
@@ -492,7 +513,16 @@ li{
   background-position: center;
   transition: 0.3s ease;
 }
-
+.exploration-more{
+  height: 64vh;
+  width: 48vh;
+  margin-bottom: 8px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
 .about-text{
   margin-left: 16px;
   max-width: 500px;
