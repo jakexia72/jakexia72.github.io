@@ -242,7 +242,7 @@ $(document).ready(function () {
 		explorationSection.animate({ scrollLeft: destination }, 800);
 	}
 
-	const numIndicators = 20;
+	const numIndicators =  $('.exploration').length;
 	function createHorizontalScrollIndicators() {
 		for (let i = 0; i < numIndicators; i++) {
 			console.log(i);
