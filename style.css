@@ -557,7 +557,6 @@ li {
     -webkit-overflow-scrolling: touch;
     margin-right: -16px;
     margin-left: -64px;
-    scroll-snap-type: x mandatory;
     scroll-padding: 50%;
 }
 
@@ -566,7 +565,6 @@ li {
 }
 
 .exploration {
-    scroll-snap-align: center;
     margin-left: 36px;
 }
 
