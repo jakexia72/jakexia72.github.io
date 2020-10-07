@@ -316,7 +316,11 @@ $(document).ready(function() {
             $('.addBlur').addClass('darkBlur');
             changeCss('#landing', 'border-color: #161616;');
             changeCss('.mainColorBackground', 'background-color: black;');
-            changeCss('.darkSVGFill', 'fill:white;')
+            changeCss('.mainColorBackground-blur', 'background-color: rgba(0,0,0,0.5);');
+            changeCss('.darkSVGFill', 'fill:white;');
+            changeCss('.addAnimatedUnderling::after', 'background-color: white;');
+            changeCss('#mainMenu .menu-options a::after', 'background-color: white;')
+
             nightMode = true;
         } else if (nightMode) {
             $('#night-mode-icon').html(moonIcon);
