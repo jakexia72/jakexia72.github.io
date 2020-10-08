@@ -318,8 +318,8 @@ $(document).ready(function() {
             changeCss('.mainColorBackground', 'background-color: black;');
             changeCss('.mainColorBackground-blur', 'background-color: rgba(0,0,0,0.5);');
             changeCss('.darkSVGFill', 'fill:white;');
-            changeCss('.addAnimatedUnderling::after', 'background-color: white;');
-            changeCss('#mainMenu .menu-options a::after', 'background-color: white;')
+            changeCss('#mainMenu .menu-options a::after', 'background: white;')
+            changeCss('.addAnimatedUnderline::after', 'background: white;');
 
             nightMode = true;
         } else if (nightMode) {
