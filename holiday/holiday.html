@@ -1,0 +1,362 @@
+<style>
+    body{
+        /* width: 100vw;
+        height: 100vh; */
+        padding: 0;
+        margin: 0;
+        -webkit-transition: 1s ease;
+        -moz-transition: 1s ease;
+        -o-transition: 1s ease;
+        -ms-transition: 1s ease;
+        transition: 1s ease;
+        background-color: rgb(41,40,36);
+    }
+    
+    .card{
+        position: -webkit-sticky;
+        position: sticky;
+        top:0px;
+        z-index: 1;
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+    .card-content{
+        max-width: 600px;
+    }
+    
+    .password {
+        height: 100vh;
+        position: fixed;
+        background-color: rgb(41,40,36);
+        color: rgb(234,189,95);
+        z-index: 100;
+    }
+    .invisible{
+        -webkit-transition: 1s ease;
+        -moz-transition: 1s ease;
+        -o-transition: 1s ease;
+        -ms-transition: 1s ease;
+        transition: 1s ease;
+        height: 0px;
+        overflow: hidden; 
+    }
+    .rotated{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    #dear-special-person{
+        font-size: 2em;
+    }
+    #actual-card{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #actual-card:before
+    {
+        content: "";
+        position: absolute;
+        width: 100vh;
+        height: 100vw;
+        top: -0%;
+        left: -0%;
+        z-index: -1;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(90deg) translatey(-100vw);
+        -moz-transform: rotate(90deg) translatey(-100vw);
+        -ms-transform: rotate(90deg) translatey(-100vw);
+        -o-transform: rotate(90deg) translatey(-100vw);
+        transform: rotate(90deg) translatey(-100vw);
+        transform-origin: top left;
+    }
+    #profile{
+        width: 200px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+    .slide1{
+        background-color: rgb(205,	86,	37);
+        color: rgb(234,189,95);
+    }
+    .slide2{
+        background-color: rgb(98,133,136);
+        color:white;
+    }
+    .slide3{
+        background-color: rgb(234,189,95);
+        color: rgb(205,	86,	37);
+    }
+    .slide4{
+        background-color: rgb(141,201,181);
+        color: rgb(47,49,44);
+    }
+    .slide5{
+        background-color: rgb(47,49,44);
+        color: rgb(205,	86,	37);
+    }
+    .slide6{
+        background-color: rgb(98,133,136);
+        color: rgb(234,189,95);
+    }
+    .slide7{
+        background-color: rgb(220,150,148);
+        color: rgb(49,52,59);
+    }
+    .slide8{
+        background-color: rgb(53,72,87);
+        color: rgb(234,189,95);
+    }
+    .slide9{
+        height: 100vh;
+        -webkit-backdrop-filter: saturate(120%) blur(25px);
+        backdrop-filter: blur(10px); 
+        color:white;
+    }
+    h1{
+        font-size: 4em;
+    }
+    h2{
+        font-size: 3em;
+    }
+    h3{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1em;
+    }
+    .center{
+        text-align: center;
+    }
+    .right{
+        text-align: right;
+    }
+    @media only screen and (max-width: 320px) {
+        .card-content{
+            max-width: 300px;
+        }
+        h1{
+            font-size: 2em; 
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        h3{
+            font-size: 1em;
+        }
+        p{
+            font-size: 0.75em;
+        } 
+    }
+    @media only screen and (min-width: 321px) and (max-width: 800px) {
+        .card-content{
+            max-width: 300px;
+        }
+        h1{
+            font-size: 2.5em;
+        }
+        h2{
+            font-size: 2em;
+        }
+        h3{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1em;
+        } 
+        #profile{
+            width: 100px;
+            height: 125px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    @media only screen and (max-width: 800px) and (orientation: landscape) {
+        .card-content{
+            max-width: 300px;
+        }
+        h1{
+            font-size: 2em; 
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        h3{
+            font-size: 1em;
+        }
+        p{
+            font-size: 0.75em;
+        } 
+    }
+   
+
+</style>
+
+<body>
+    <div class='card password' id='sentry'>
+        <div class='card-content'>
+            <h1>This page is by invitation only.</h1>
+            <h3>What is the password?</h3>
+            <form id='form'>
+                <input id='password'/>
+                <input type="submit">
+            </form>
+            <h2 class='invisible' id='error-message'>The password you've entered is wrong</h2>
+        </div>
+    </div>
+    <div class='card slide1'>
+        <div class='card-content'>
+            <div id='profile'></div>
+            <h3>Dear <span id ='dear-special-person'>Special Person</span>,</h3>
+            <h1>Welcome to your virtual holiday card.</h1>
+            <h2>(I wish I could have <br> delivered this but oh well...)</h2>
+        </div>
+    </div>
+    <div class = 'card slide2'>
+        <div class='card-content'>
+            <h1>You are seeing this because you've made a positive impact on my perilous year and I want to recognize that.</h1>
+        </div>
+    </div>
+    <div class = 'card slide3 right'>
+        <div class='card-content'>
+            <h3>As you know this has been a rough year for me,</h3>
+            <h2>so I'm glad I have friends like you who made it more</h2>
+            <h1>bearable, pleasant & enjoyable.</h1>
+        </div>
+    </div>
+    <div class = 'card slide4'>
+        <div class='card-content'>
+            <h3>It's too bad that</h3>
+            <h2 id='bad'>I messed this up and you can't read this properly</h2>
+            <h3 class='right'>but I'm glad</h3>
+            <h2 id='good' class='right'>you are here anyways</h2>
+        </div>
+    </div>
+    <div class = 'card slide5 right'>
+        <div class='card-content'>
+            <h1 id='future'></h1>
+        </div>
+    </div>
+    <div class = 'card slide6'>
+        <div class='card-content'>
+            <h1>Anyways <span id='user'>person</span>, my year was made better by you and I really apprecaite it.
+        </div>
+    </div>
+    <div class = 'card slide7'>
+        <div class='card-content'>
+            <h1>OK</h1>
+            <h2>Enough foreplay, here is your card...</h2>
+        </div>
+    </div>
+    <div class = 'card slide8' id='check-mobile'>
+        <div class='card-content'>
+            <h1 class='rotated'>Tilt your head...</h1>
+        </div>
+    </div>
+    <div class = 'card' id='actual-card'>
+    </div>
+    <div class = 'card slide9'>
+        <div class='card-content'>
+            <h1>Here's to a better year ahead.</h1>
+            <p>Love,</p>
+            <h3>Jake</h3>
+        </div>
+    </div>
+    <script>
+
+        // var cards = document.getElementsByClassName('card');
+        // for (let i = 0; i < cards.length; i++){
+        //     cards[i].style.top = i * window.innerHeight;
+        // }
+
+        var bg = 'black'
+
+        function checkWindow(){
+            let screenRatio = window.innerHeight / window.innerWidth;
+            if (screenRatio < 1){
+                //landscape
+                document.getElementById('check-mobile').classList.add('invisible')
+                var styleElem = document.head.appendChild(document.createElement("style"));
+                styleElem.innerHTML = `#actual-card:before {display: none;}`;
+                document.getElementById('actual-card').style.backgroundImage = bg
+            } else {
+                document.getElementById('check-mobile').classList.remove('invisible')
+                var styleElem = document.head.appendChild(document.createElement("style"));
+                styleElem.innerHTML = `#actual-card:before {display: block;}`;
+                document.getElementById('actual-card').style.backgroundImage = 'none'
+
+            }
+        }
+        checkWindow()
+
+        window.addEventListener('resize', checkWindow);
+
+        users = {
+            'uhn-bioinformatics-and-hpc-core' : {
+                name: 'Tania',
+                bad: "we didn't get to spend more time together,",
+                good: "we stayed in touch and both upgraded to iPhone 12 Pro!",
+                future: "I'm still waiting for our photoshoot to happen!!!"
+            },
+            'love-yourself': {
+                name: 'Hoh',
+                bad: "we didn't have a chance to go to a gay bar together,",
+                good:"that we got to go on the pleasant hike where we uncovered that hidden lake.",
+                future: "We should hang out more often when the world resumes."
+            },
+            'press-record-next-time' : {
+                name: 'Alexis',
+                bad: "we didn't get to spend more time together in person,",
+                good: "we went clubbing together at the start of the year & launched a startup.",
+                future: "I HOPE TO SEE YOU IN CALIFORNIA SOMEDAY IN THE NEAR FUTURE."
+            },
+            'george-makes-guitar-covers' : {
+                name: 'Audrey',
+                bad: "your number 1 FWB does guitar covers and it's not even indie songs but maroon 5 / the friends theme,",
+                good: "I got to see you a bunch and go to Planta on Su'aad's birthday!",
+                future: "I can't wait for things to go back to normal so we can go clubbing again."
+            },
+            'black-madonna' : {
+                name: 'Linda',
+                bad: "we didn't get to spend a lot of time in person and our concert was canclled",
+                good: "we got bubble tea and spring rolls and we live close to each other",
+                future: "I can't wait for things to go back to normal so I can buy you a new concert ticket :)"
+            },
+        }
+
+        document.getElementById('form').onsubmit = function() { 
+            password = document.getElementById('password').value;
+            user = users[password]
+
+            if (user == null) {
+                console.log('running')
+                errorMessage = document.getElementById('error-message');
+                errorMessage.classList.remove('invisible'); 
+            } else {
+                document.getElementById('profile').style.backgroundImage = `url('./images/${user.name}.jpeg')`
+                sentry = document.getElementById('sentry');
+                sentry.classList.add('invisible');
+                document.getElementById('dear-special-person').innerText = user.name
+                document.getElementById('bad').innerText = user.bad
+                document.getElementById('good').innerText = user.good
+                document.getElementById('future').innerText = user.future
+                document.getElementById('user').innerText = user.name
+                bg = `url('./images/${user.name}.png')`
+                document.getElementById('actual-card').style.backgroundImage = bg
+
+                var styleElem = document.head.appendChild(document.createElement("style"));
+                styleElem.innerHTML = `#actual-card:before {background-image: url('./images/${user.name}.png')}`;
+            }
+
+        
+            return false;
+        };
+
+    </script>
+</body>
+
