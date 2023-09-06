@@ -1,5 +1,5 @@
 var scene = new THREE.Scene();
-let container = $('#scene-container');
+let container = $("#scene-container");
 
 var camera = new THREE.PerspectiveCamera(
   60,
@@ -10,9 +10,9 @@ var camera = new THREE.PerspectiveCamera(
 
 camera.position.set(0, -32, 200);
 camera.lookAt(scene.position);
-var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
+var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize($(container).innerWidth(), $(container).innerHeight());
-$(container).append( renderer.domElement );
+$(container).append(renderer.domElement);
 
 var division = 40;
 var limit = 200;
@@ -30,14 +30,14 @@ grid.geometry.addAttribute(
 grid.material = new THREE.ShaderMaterial({
   uniforms: {
     time: {
-      value: 0
+      value: 0,
     },
     limits: {
-      value: new THREE.Vector2(-limit, limit)
+      value: new THREE.Vector2(-limit, limit),
     },
     speed: {
-      value: 5
-    }
+      value: 5,
+    },
   },
   vertexShader: `
     uniform float time;
@@ -67,7 +67,7 @@ grid.material = new THREE.ShaderMaterial({
       gl_FragColor = vec4(vColor, 1.);
     }
   `,
-  vertexColors: THREE.VertexColors
+  vertexColors: THREE.VertexColors,
 });
 
 scene.add(grid);
@@ -84,13 +84,11 @@ function render() {
   renderer.render(scene, camera);
 }
 
-window.addEventListener( 'resize', onWindowResize, false );
+window.addEventListener("resize", onWindowResize, false);
 
-function onWindowResize(){
+function onWindowResize() {
+  camera.aspect = $(container).innerWidth() / $(container).innerHeight();
+  camera.updateProjectionMatrix();
 
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
+  renderer.setSize($(container).innerWidth(), $(container).innerHeight());
 }
